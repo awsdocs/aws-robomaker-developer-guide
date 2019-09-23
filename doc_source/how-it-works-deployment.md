@@ -1,0 +1,5 @@
+# Fleet Management and Deployment<a name="how-it-works-deployment"></a>
+
+After testing and simulation are complete, you can deploy the robot application to your robots using the AWS IoT Greengrass OTA \(over\-the\-air\) update mechanism\. Before you deploy your application, configure each robot to accept updates from AWS RoboMaker and to communicate deployment status\. Next, register your configured robots into a fleet\. A fleet is a logical grouping of robots\. When your fleet is configured, you can deploy your robot application, controlling the pace of deployment and what happens before and after the robot application launches on the robot\.
+
+Information about the deployment is provided by AWS RoboMaker\. Additional information specific to your robot and scenarios can be captured using AWS RoboMaker cloud extensions and custom code\.
