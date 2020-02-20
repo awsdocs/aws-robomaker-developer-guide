@@ -36,7 +36,7 @@ Array Members: Fixed number of 1 item\.
 Required: No
 
  ** [maxResults](#API_ListFleets_RequestSyntax) **   <a name="robomaker-ListFleets-request-maxResults"></a>
-The maximum number of deployment job results returned by `ListFleets` in paginated output\. When this parameter is used, `ListFleets` only returns `maxResults` results in a single page along with a `nextToken` response element\. The remaining results of the initial request can be seen by sending another `ListFleets` request with the returned `nextToken` value\. This value can be between 1 and 100\. If this parameter is not used, then `ListFleets` returns up to 100 results and a `nextToken` value if applicable\.   
+When this parameter is used, `ListFleets` only returns `maxResults` results in a single page along with a `nextToken` response element\. The remaining results of the initial request can be seen by sending another `ListFleets` request with the returned `nextToken` value\. This value can be between 1 and 200\. If this parameter is not used, then `ListFleets` returns up to 200 results and a `nextToken` value if applicable\.   
 Type: Integer  
 Required: No
 

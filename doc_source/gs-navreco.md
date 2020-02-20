@@ -1,6 +1,6 @@
 # Navigation and Person Recognition<a name="gs-navreco"></a>
 
-In this section, explore a robot that navigates between goal locations and recognizes faces in photos in a simulated home\. 
+In this section, explore a robot that moves between places and recognizes faces in photos\. 
 
 Before you use AWS RoboMaker for the first time, complete the tasks in [Create an Account](gs-set-up.md)\. Then, in the AWS RoboMaker console, launch the Navigation and Person Recognition sample application\.
 
@@ -26,7 +26,7 @@ Use rqt to view images from the robot's camera\.
 
 ## View Recognized People<a name="gs-navreco-recognized"></a>
 
-Use the terminal and rostopic to view recognized people as the robot explores the virtual environment\. 
+Use the terminal and rostopic to view people as the robot explores the virtual space\. 
 
 **To view the logs**
 
@@ -36,19 +36,19 @@ Use the terminal and rostopic to view recognized people as the robot explores th
 
 1. In the **Simulation details** page, in the **Simulation tools** section, select **terminal**\.
 
-1. In **terminal**, type in the following commands to set up the ROS environment and run the text command tool:
+1. In **terminal**, type in the following to set up the ROS environment and run the text command tool\.
 
    ```
    eval $AWS_ROBOMAKER_ROBOT_APPLICATION_SETUP
    ```
 
-1. Type in the following command:
+1. Type in the following command\.
 
    ```
    rostopic echo /rekognized_people
    ```
 
-   When a person is recognized, you will see output similar to:
+   When a person is recognized, you see output similar to this:
 
    ```
    Data: "I see brandon"

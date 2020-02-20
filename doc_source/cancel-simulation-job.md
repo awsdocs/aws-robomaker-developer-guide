@@ -22,7 +22,7 @@ Follow the steps under one of the following tabs:
 #### [ Using the AWS CLI ]<a name="proc-cancel-simulation-job-api"></a>
 
 **Example**  
-Here's an example AWS CLI command that performs the equivalent of the console\-based view simulation job on the other tab\.  
+Here's an example AWS CLI command that performs the equivalent of the console\-based cancel simulation job on the other tab\.  
 
 ```
 $ aws robomaker list-simulation-jobs

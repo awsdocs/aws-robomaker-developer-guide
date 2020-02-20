@@ -1,12 +1,12 @@
 # Step 3: Configure Environment and Build Applications<a name="gs-build"></a>
 
-In this section, you create a AWS Cloud9 development environment integrated with AWS RoboMaker and install the Hello World code\. In the development environment, you modify the robot application, and then build the robot and simulation application\. 
+In this section, you create an AWS Cloud9 environment with AWS RoboMaker\. You then install sample code\. In the development environment, you modify the robot application, and then build the robot and simulation application\. 
 
 **Topics**
-+ [Create a development environment](#gs-build-createide)
++ [Create a Development Environment](#gs-build-createide)
 + [Modify and Build Applications](#gs-build-apps)
 
-## Create a development environment<a name="gs-build-createide"></a>
+## Create a Development Environment<a name="gs-build-createide"></a>
 
 The AWS Cloud9 development environment provides the tools to develop robot applications and simulation applications with ROS and AWS RoboMaker\.
 
@@ -18,19 +18,19 @@ The AWS Cloud9 development environment provides the tools to develop robot appli
 
 1. In the **Create AWS RoboMaker development environment** page, enter **HelloWorld** as the environment **name**\. 
 
-1. For **ROS Distribution**, select **ROS Kinetic**\.
+1. For **ROS Distribution**, select **ROS Melodic**\.
 
 1. Accept the default **Instance type** \(**m4\.large**\)\. You can select different instances type to improve bundling performance\.
 
 1. Select a **VPC**\. Use the default VPC\.
 
-1. Select a **Subnet**\.
+1. Select a **Subnet**\. Use a public Subnet\.
 
 1. Choose **Create** to create the AWS Cloud9 development environment\.
 
 ## Modify and Build Applications<a name="gs-build-apps"></a>
 
-In this section, you use the AWS Cloud9 development environment to modify the robot application to rotate counter\-clockwise and then build the robot and simulation application\. 
+In this section, you use the AWS Cloud9 development environment to modify the robot application\. The steps show how to rotate the robot counter\-clockwise and then build the robot and the simulation application\. 
 
 **To build the robot and simulation applications**
 
@@ -44,9 +44,9 @@ In this section, you use the AWS Cloud9 development environment to modify the ro
 
 1. In the **rotate** tab, modify the code to make the robot turn clockwise by making the rate negative: `self.twist.angular.z = -0.1`\. Save the file by selecting **File** and then **Save**\. 
 
-1. Build the robot application\. On the menu, choose **AWS RoboMaker Run**, then choose **Build**, and then select **HelloWorld Robot**\. 
+1. Build the robot application\. On the menu, choose **Run**, then choose **Build**, and then select **HelloWorld Robot**\. 
 
-1. Build the simulation application\. On the menu, choose **AWS RoboMaker Run**, then choose **Build**, and then select **HelloWorld Simulation**\. 
+1. Build the simulation application\. On the menu, choose **Run**, then choose **Build**, and then select **HelloWorld Simulation**\. 
 
 **Next Step**  
 [Step 4: Run Simulation](gs-simulation.md)

@@ -13,7 +13,7 @@ Follow the steps under one of the following tabs\.
 
 1. *Optional: * Select **Additional settings** to view additional configuration options\.
 
-1. Optional: Select a **Software suite version**\. ROS Melodic is the latest version\. It works with Gazebo 9\. For more information about the Robot Operating System \(ROS\), see [www\.ros\.org](http://www.ros.org/)\.
+1. Optional: Select a **ROS distribution**\. ROS Melodic is the latest version\. It works with Gazebo 9\. For more information about the Robot Operating System \(ROS\), see [www\.ros\.org](http://www.ros.org/)\.
 
 1. Optional: Select a **Simulation software suite**\. Each sample application is built for Gazebo 7 and Gazebo 9\. Gazebo 9 has additional features for robotics developers\. 
 

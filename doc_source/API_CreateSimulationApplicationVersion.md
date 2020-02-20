@@ -104,7 +104,7 @@ Length Constraints: Minimum length of 1\. Maximum length of 40\.
 Pattern: `[a-zA-Z0-9_.\-]*` 
 
  ** [robotSoftwareSuite](#API_CreateSimulationApplicationVersion_ResponseSyntax) **   <a name="robomaker-CreateSimulationApplicationVersion-response-robotSoftwareSuite"></a>
-Information about the robot software suite\.  
+Information about the robot software suite \(ROS distribution\)\.  
 Type: [RobotSoftwareSuite](API_RobotSoftwareSuite.md) object
 
  ** [simulationSoftwareSuite](#API_CreateSimulationApplicationVersion_ResponseSyntax) **   <a name="robomaker-CreateSimulationApplicationVersion-response-simulationSoftwareSuite"></a>

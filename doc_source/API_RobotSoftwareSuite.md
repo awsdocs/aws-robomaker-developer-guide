@@ -1,17 +1,17 @@
 # RobotSoftwareSuite<a name="API_RobotSoftwareSuite"></a>
 
-Information about a robot software suite\.
+Information about a robot software suite \(ROS distribution\)\.
 
 ## Contents<a name="API_RobotSoftwareSuite_Contents"></a>
 
  **name**   <a name="robomaker-Type-RobotSoftwareSuite-name"></a>
-The name of the robot software suite\.  
+The name of the robot software suite \(ROS distribution\)\.  
 Type: String  
 Valid Values:` ROS | ROS2`   
 Required: No
 
  **version**   <a name="robomaker-Type-RobotSoftwareSuite-version"></a>
-The version of the robot software suite\.  
+The version of the robot software suite \(ROS distribution\)\.  
 Type: String  
 Valid Values:` Kinetic | Melodic | Dashing`   
 Required: No

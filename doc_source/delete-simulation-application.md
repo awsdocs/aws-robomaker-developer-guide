@@ -1,9 +1,9 @@
 # Deleting a Simulation Application<a name="delete-simulation-application"></a>
 
-When you no longer need a AWS RoboMaker simulation application and all of its versions, you can delete it\.
+When you no longer need a AWS RoboMaker simulation application and all of its versions, delete it\.
 
 **To delete a simulation application**  
-Follow the steps under one of the following tabs:
+Follow the steps under one of the following tabs\.
 
 ------
 #### [ Using the console ]<a name="proc-delete-simulation-application-con"></a>
@@ -12,7 +12,7 @@ Follow the steps under one of the following tabs:
 
 1. In the left navigation pane, choose **Development**, then choose **Simulation applications**\.
 
-1. Select the **Name** of a simulation application to see details including the time it was created and last updated\.
+1. Select the **Name** of a simulation application\. This shows details such as the time it was created and last updated\.
 
 1. In the simulation application detail page, choose **Delete** and then choose **Delete** to delete to confirm\.
 

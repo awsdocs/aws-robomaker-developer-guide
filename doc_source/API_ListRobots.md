@@ -36,13 +36,12 @@ Array Members: Fixed number of 1 item\.
 Required: No
 
  ** [maxResults](#API_ListRobots_RequestSyntax) **   <a name="robomaker-ListRobots-request-maxResults"></a>
-The maximum number of deployment job results returned by `ListRobots` in paginated output\. When this parameter is used, `ListRobots` only returns `maxResults` results in a single page along with a `nextToken` response element\. The remaining results of the initial request can be seen by sending another `ListRobots` request with the returned `nextToken` value\. This value can be between 1 and 100\. If this parameter is not used, then `ListRobots` returns up to 100 results and a `nextToken` value if applicable\.   
+When this parameter is used, `ListRobots` only returns `maxResults` results in a single page along with a `nextToken` response element\. The remaining results of the initial request can be seen by sending another `ListRobots` request with the returned `nextToken` value\. This value can be between 1 and 200\. If this parameter is not used, then `ListRobots` returns up to 200 results and a `nextToken` value if applicable\.   
 Type: Integer  
 Required: No
 
  ** [nextToken](#API_ListRobots_RequestSyntax) **   <a name="robomaker-ListRobots-request-nextToken"></a>
 The `nextToken` value returned from a previous paginated `ListRobots` request where `maxResults` was used and the results exceeded the value of that parameter\. Pagination continues from the end of the previous results that returned the `nextToken` value\.   
-This token should be treated as an opaque identifier that is only used to retrieve the next items in a list and not for other programmatic purposes\.
 Type: String  
 Length Constraints: Minimum length of 1\. Maximum length of 2048\.  
 Pattern: `[a-zA-Z0-9_.\-\/+=]*`   

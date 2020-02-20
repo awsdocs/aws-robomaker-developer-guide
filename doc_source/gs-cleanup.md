@@ -10,4 +10,4 @@ Simulation jobs are automatically deleted after 90 days\.
 
 1. Open the IAM console at `[https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)` and delete the IAM role\. If you created permissions policies, delete them\.
 
-1. Open the AWS Cloud9 console at `[https://console\.aws\.amazon\.com/cloud9/](https://console.aws.amazon.com/cloud9/)` \. Choose the **HelloWorld** environment and then choose **Delete**\. Confirm by typing **Delete** and then selecting **Delete**\.
+1. Open the AWS Cloud9 console at `[https://console\.aws\.amazon\.com/cloud9/](https://console.aws.amazon.com/cloud9/)`\. Choose the **HelloWorld** environment and then choose **Delete**\. Confirm by typing **Delete** and then selecting **Delete**\.

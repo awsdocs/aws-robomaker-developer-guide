@@ -3,7 +3,7 @@
 View the details of a simulation application\.
 
 **To see the details of a simulation application**  
-Follow the steps under one of the following tabs:
+Follow the steps under one of the following tabs\.
 
 ------
 #### [ Using the console ]<a name="proc-describe-simulation-application-con"></a>
@@ -17,7 +17,7 @@ Follow the steps under one of the following tabs:
 ------
 #### [ Using the AWS CLI ]<a name="proc-describe-simulation-application-api"></a>
 
-You can use the following commands to describe a simulation application:
+Use the following commands to describe a simulation application\.
 + **API/SDK:** [https://docs.aws.amazon.com/robomaker/latest/dg/API_DescribeSimulationApplication.html](https://docs.aws.amazon.com/robomaker/latest/dg/API_DescribeSimulationApplication.html)
 + **AWS CLI:** [https://docs.aws.amazon.com/cli/latest/reference/robomaker/describe-simulation-application.html](https://docs.aws.amazon.com/cli/latest/reference/robomaker/describe-simulation-application.html)
 

@@ -13,14 +13,14 @@ Required: No
 A list of security group IDs associated with the simulation job\.  
 Type: Array of strings  
 Array Members: Minimum number of 1 item\. Maximum number of 5 items\.  
-Length Constraints: Minimum length of 1\.  
+Length Constraints: Minimum length of 1\. Maximum length of 255\.  
 Required: No
 
  **subnets**   <a name="robomaker-Type-VPCConfigResponse-subnets"></a>
 A list of subnet IDs associated with the simulation job\.  
 Type: Array of strings  
 Array Members: Minimum number of 1 item\. Maximum number of 16 items\.  
-Length Constraints: Minimum length of 1\.  
+Length Constraints: Minimum length of 1\. Maximum length of 255\.  
 Required: No
 
  **vpcId**   <a name="robomaker-Type-VPCConfigResponse-vpcId"></a>

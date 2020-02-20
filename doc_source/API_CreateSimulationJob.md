@@ -101,7 +101,7 @@ Pattern: `[a-zA-Z0-9_\-=]*`
 Required: No
 
  ** [dataSources](#API_CreateSimulationJob_RequestSyntax) **   <a name="robomaker-CreateSimulationJob-request-dataSources"></a>
-The data sources for the simulation job\.  
+Specify data sources to mount read\-only files from S3 into your simulation\. These files are available under `/opt/robomaker/datasources/data_source_name`\.   
 There is a limit of 100 files and a combined size of 25GB for all `DataSourceConfig` objects\. 
 Type: Array of [DataSourceConfig](API_DataSourceConfig.md) objects  
 Array Members: Minimum number of 1 item\. Maximum number of 5 items\.  
@@ -315,7 +315,7 @@ Etag for RobotApplication does not match value during version creation\.
 SimulationApplicationVersionMismatchedEtag  
 Etag for SimulationApplication does not match value during version creation\.
 Type: String  
-Valid Values:` InternalServiceError | RobotApplicationCrash | SimulationApplicationCrash | BadPermissionsRobotApplication | BadPermissionsSimulationApplication | BadPermissionsS3Object | BadPermissionsS3Output | BadPermissionsCloudwatchLogs | SubnetIpLimitExceeded | ENILimitExceeded | BadPermissionsUserCredentials | InvalidBundleRobotApplication | InvalidBundleSimulationApplication | InvalidS3Resource | MismatchedEtag | RobotApplicationVersionMismatchedEtag | SimulationApplicationVersionMismatchedEtag | ResourceNotFound | InvalidInput | WrongRegionS3Bucket | WrongRegionS3Output | WrongRegionRobotApplication | WrongRegionSimulationApplication` 
+Valid Values:` InternalServiceError | RobotApplicationCrash | SimulationApplicationCrash | BadPermissionsRobotApplication | BadPermissionsSimulationApplication | BadPermissionsS3Object | BadPermissionsS3Output | BadPermissionsCloudwatchLogs | SubnetIpLimitExceeded | ENILimitExceeded | BadPermissionsUserCredentials | InvalidBundleRobotApplication | InvalidBundleSimulationApplication | InvalidS3Resource | LimitExceeded | MismatchedEtag | RobotApplicationVersionMismatchedEtag | SimulationApplicationVersionMismatchedEtag | ResourceNotFound | RequestThrottled | BatchTimedOut | BatchCanceled | InvalidInput | WrongRegionS3Bucket | WrongRegionS3Output | WrongRegionRobotApplication | WrongRegionSimulationApplication` 
 
  ** [iamRole](#API_CreateSimulationJob_ResponseSyntax) **   <a name="robomaker-CreateSimulationJob-response-iamRole"></a>
 The IAM role that allows the simulation job to call the AWS APIs that are specified in its associated policies on your behalf\.  

@@ -56,13 +56,17 @@ Content-type: application/json
             "[launchFile](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-launchFile)": "string",
             "[packageName](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-packageName)": "string",
             "[postLaunchFile](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-postLaunchFile)": "string",
-            "[preLaunchFile](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-preLaunchFile)": "string",
-            "[runtimeArgs](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-runtimeArgs)": [ "string" ]
+            "[preLaunchFile](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-preLaunchFile)": "string"
          }
       }
    ],
    "[deploymentConfig](#robomaker-SyncDeploymentJob-response-deploymentConfig)": { 
       "[concurrentDeploymentPercentage](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-concurrentDeploymentPercentage)": number,
+      "[downloadConditionFile](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-downloadConditionFile)": { 
+         "[bucket](API_S3Object.md#robomaker-Type-S3Object-bucket)": "string",
+         "[etag](API_S3Object.md#robomaker-Type-S3Object-etag)": "string",
+         "[key](API_S3Object.md#robomaker-Type-S3Object-key)": "string"
+      },
       "[failureThresholdPercentage](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-failureThresholdPercentage)": number,
       "[robotDeploymentTimeoutInSeconds](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-robotDeploymentTimeoutInSeconds)": number
    },
@@ -129,7 +133,7 @@ Etag for RobotApplication does not match value during version creation\.
 SimulationApplicationVersionMismatchedEtag  
 Etag for SimulationApplication does not match value during version creation\.
 Type: String  
-Valid Values:` ResourceNotFound | EnvironmentSetupError | EtagMismatch | FailureThresholdBreached | RobotDeploymentAborted | RobotDeploymentNoResponse | RobotAgentConnectionTimeout | GreengrassDeploymentFailed | MissingRobotArchitecture | MissingRobotApplicationArchitecture | MissingRobotDeploymentResource | GreengrassGroupVersionDoesNotExist | ExtractingBundleFailure | PreLaunchFileFailure | PostLaunchFileFailure | BadPermissionError | InternalServerError` 
+Valid Values:` ResourceNotFound | EnvironmentSetupError | EtagMismatch | FailureThresholdBreached | RobotDeploymentAborted | RobotDeploymentNoResponse | RobotAgentConnectionTimeout | GreengrassDeploymentFailed | MissingRobotArchitecture | MissingRobotApplicationArchitecture | MissingRobotDeploymentResource | GreengrassGroupVersionDoesNotExist | ExtractingBundleFailure | PreLaunchFileFailure | PostLaunchFileFailure | BadPermissionError | DownloadConditionFailed | InternalServerError` 
 
  ** [failureReason](#API_SyncDeploymentJob_ResponseSyntax) **   <a name="robomaker-SyncDeploymentJob-response-failureReason"></a>
 The failure reason if the job fails\.  

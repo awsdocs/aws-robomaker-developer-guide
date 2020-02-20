@@ -14,7 +14,7 @@ Follow these steps:
 
 1. In the **Create AWS RoboMaker development environment** page, type a **name** for the environment\.
 
-1. Choose a **ROS Distribution**\. For more information about the Robot Operating System \(ROS\), see [www\.ros\.org](http://www.ros.org/)\.
+1. Choose a **ROS Distribution**\. For more information about the Robot Operating System \(ROS\), see [www\.ros\.org](http://www.ros.org/)\. For more information about using ROS 2 with AWS RoboMaker, see [ROS 2 Dashing \(Beta\)](robomaker-ros2-beta.md)\.
 
 1. For **Instance type**, choose an instance type with the amount of RAM and vCPUs you think you need for the kinds of tasks you want to do\. Or leave the default choice\.
 **Note**  

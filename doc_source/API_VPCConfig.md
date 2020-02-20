@@ -13,14 +13,14 @@ Required: No
 A list of one or more security groups IDs in your VPC\.  
 Type: Array of strings  
 Array Members: Minimum number of 1 item\. Maximum number of 5 items\.  
-Length Constraints: Minimum length of 1\.  
+Length Constraints: Minimum length of 1\. Maximum length of 255\.  
 Required: No
 
  **subnets**   <a name="robomaker-Type-VPCConfig-subnets"></a>
 A list of one or more subnet IDs in your VPC\.  
 Type: Array of strings  
 Array Members: Minimum number of 1 item\. Maximum number of 16 items\.  
-Length Constraints: Minimum length of 1\.  
+Length Constraints: Minimum length of 1\. Maximum length of 255\.  
 Required: Yes
 
 ## See Also<a name="API_VPCConfig_SeeAlso"></a>

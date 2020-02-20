@@ -24,7 +24,7 @@ Pattern: `[a-zA-Z0-9_\-]*`
 Required: No
 
  **robotSoftwareSuite**   <a name="robomaker-Type-SimulationApplicationSummary-robotSoftwareSuite"></a>
-Information about a robot software suite\.  
+Information about a robot software suite \(ROS distribution\)\.  
 Type: [RobotSoftwareSuite](API_RobotSoftwareSuite.md) object  
 Required: No
 

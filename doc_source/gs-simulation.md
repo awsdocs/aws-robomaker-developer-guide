@@ -1,6 +1,6 @@
 # Step 4: Run Simulation<a name="gs-simulation"></a>
 
-In this section, you bundle the robot application and simulation application into source files\. A source file includes all of the dependencies needed to run the application\. You use a robot application source file and a simulation application source file to create a simulation job\. You use a robot application source file to create a deployment\.
+In this section, you bundle the robot application and simulation application into source files\. A source file includes all of the dependencies you need to run the application\. You use a robot application source file and a simulation application source file to create a simulation job\. You use a robot application source file to create a deployment\.
 
 **Topics**
 + [Bundle the Hello World Applications](#gs-simulation-build)
@@ -9,36 +9,34 @@ In this section, you bundle the robot application and simulation application int
 
 ## Bundle the Hello World Applications<a name="gs-simulation-build"></a>
 
-In the previous step, you built the robot application and simulation application\. In this step, you bundle each application with the resources and dependencies needed to run\. For example, the simulation application needs a model and physical parameters of the TurtleBot3\.
+In the previous step, you built the robot and simulation applications\. In this step, you bundle each application with the resources and dependencies you need to run\. For example, the simulation application needs a model and physical parameters of the TurtleBot3\.
 
 **Warning**  
 Bundling the robot application and simulation application might each take 20 minutes or more depending on your instance type\.
 
 **To bundle the Hello World applications**
 
-1. In the **HelloWorld** AWS Cloud9 development environment, choose **AWS RoboMaker Run** on the menu, then choose **Bundle**, and then select **HelloWorld Robot**\. 
+1. In the **HelloWorld** AWS Cloud9 development environment, choose **Run** on the menu, then choose **Bundle**, and then select **HelloWorld Robot**\. 
 
-1. On the menu, choose **AWS RoboMaker Run**, then choose **Bundle**, and then select **HelloWorld Simulation**\. 
+1. On the menu, choose **Run**, then choose **Bundle**, and then select **HelloWorld Simulation**\. 
 
 ## Restart the Hello World Simulation Application<a name="gs-simulation-restart"></a>
 
 A running simulation can be restarted with updated robot application and simulation application source\. This is useful when you are debugging code and making frequent changes\.
 
-When you restart a simulation, its timer is reset to zero\. It will run for the original duration until reset or cancelled\. For Hello World, the duration is 1 hour\.
+When you restart a simulation, its timer is reset to zero\. It will run for the original duration until reset or canceled\. For Hello World, the duration is 1 hour\.
 
-1. On the menu, choose **AWS RoboMaker Simulation**, then select **Connect**\. Select the simulation job from the list and then select **Okay**\. Restart this running Hello World simulation with your new robot application\.
+1. On the menu, choose **Simulation**, then select **Connect**\. Select the simulation job from the list and then select **Okay**\. Restart this running Hello World simulation with your new robot application\.
 
 1. Choose **AWS RoboMaker Simulation**, and select **Restart with new bundle\(s\)**\. In the **Restart simulation with selected bundles** dialog, type in **HelloWorld/robot\_ws/bundle/output\.tar** for **Robot app bundle path** and **HelloWorld/simulation\_ws/bundle/output\.tar** for **Simulation app bundle path**, then select **OK**\.
 
    AWS RoboMaker restarts the simulation with the new applications\. This extends the lifetime of the simulation for another 1 hour\.
 
-1. On the menu, choose **AWS RoboMaker Run**, then choose **Start simulation**, and then select **HelloWorld**\. 
-
 ## Explore the Simulation<a name="gs-simulation-explore"></a>
 
-When the simulation is running, you can launch Gazebo and verify that the robot is rotating counter\-clockwise\. You can also view the logs in the AWS Cloud9 development environment terminal\.
+When the simulation is running, you can launch **Gazebo** and verify that the robot is rotating counter\-clockwise\. You can also view the logs in the AWS Cloud9 development environment terminal\.
 
-1. The status of the simulation job is shown next to the **AWS RoboMaker Simulation** menu entry\. When it transitions to **Running**, you can launch applications and explore the simulation\.
+1. The status of the simulation job is shown next to the **Simulation** menu entry\. When it transitions to **Running**, you can launch applications and explore the simulation\.
 
 1. In the AWS RoboMaker console, choose **Simulation jobs** on the left and then select the **Hello World** simulation job\.
 

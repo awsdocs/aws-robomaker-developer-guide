@@ -19,9 +19,7 @@ Amazon S3 objects must be located in the same region as AWS RoboMaker\.
 
 1. In the **Create robot application** page, type a **Name** for the robot application\. Choose a name that helps you identify the robot\.
 
-1. Select the **Robot software suite** used by your robot application\. For more information about the Robot Operating System \(ROS\), see [www\.ros\.org](http://www.ros.org/)\. 
-
-1. Select the **Software suite version** used by your robot application\. 
+1. Select the **ROS distribution** used by your robot application\. For more information about the Robot Operating System \(ROS\), see [www\.ros\.org](http://www.ros.org/)\. 
 
 1. Provide the Amazon S3 path to your bundled robot application file\. If this robot application is used only in simulations, specify a bundle built for the **X86\_64** platform\. If you use this robot application in a fleet deployment, specify one or more bundles that represent the architectures of the robots in your fleet\. 
 
@@ -40,7 +38,7 @@ Amazon S3 objects must be located in the same region as AWS RoboMaker\.
 Here's an example AWS CLI command that performs the equivalent of the console\-based create robot application on the other tab\.  
 
 ```
-$ aws robomaker create-robot-application --application my-robot-application --robot-software-suite name=ROS,version=Kinetic --sources architecture=X86_64,s3Bucket=my-bucket,s3Key=my-folder/cloud-watch-robot.tar
+$ aws robomaker create-robot-application --application my-robot-application --robot-software-suite name=ROS,version=Melodic --sources architecture=X86_64,s3Bucket=my-bucket,s3Key=my-folder/cloud-watch-robot.tar
 ```
 
 ------

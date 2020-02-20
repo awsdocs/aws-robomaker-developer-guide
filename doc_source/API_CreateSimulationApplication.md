@@ -56,7 +56,7 @@ Type: [RenderingEngine](API_RenderingEngine.md) object
 Required: No
 
  ** [robotSoftwareSuite](#API_CreateSimulationApplication_RequestSyntax) **   <a name="robomaker-CreateSimulationApplication-request-robotSoftwareSuite"></a>
-The robot software suite of the simulation application\.  
+The robot software suite \(ROS distribution\) used by the simulation application\.  
 Type: [RobotSoftwareSuite](API_RobotSoftwareSuite.md) object  
 Required: Yes
 
@@ -150,7 +150,7 @@ Length Constraints: Minimum length of 1\. Maximum length of 40\.
 Pattern: `[a-zA-Z0-9_.\-]*` 
 
  ** [robotSoftwareSuite](#API_CreateSimulationApplication_ResponseSyntax) **   <a name="robomaker-CreateSimulationApplication-response-robotSoftwareSuite"></a>
-Information about the robot software suite\.  
+Information about the robot software suite \(ROS distribution\)\.  
 Type: [RobotSoftwareSuite](API_RobotSoftwareSuite.md) object
 
  ** [simulationSoftwareSuite](#API_CreateSimulationApplication_ResponseSyntax) **   <a name="robomaker-CreateSimulationApplication-response-simulationSoftwareSuite"></a>

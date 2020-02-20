@@ -3,7 +3,7 @@
 Update a simulation application\.
 
 **To update a simulation application**  
-Follow the steps under one of the following tabs:
+Follow the steps under one of the following tabs\.
 
 ------
 #### [ Using the console ]<a name="proc-update-simulation-application-con"></a>

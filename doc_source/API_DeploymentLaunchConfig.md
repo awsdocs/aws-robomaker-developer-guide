@@ -41,14 +41,6 @@ Length Constraints: Minimum length of 1\. Maximum length of 1024\.
 Pattern: `.*`   
 Required: No
 
- **runtimeArgs**   <a name="robomaker-Type-DeploymentLaunchConfig-runtimeArgs"></a>
-An array of strings specifying run\-time launch arguments\.  
-Type: Array of strings  
-Array Members: Minimum number of 1 item\. Maximum number of 16 items\.  
-Length Constraints: Minimum length of 1\. Maximum length of 1024\.  
-Pattern: `[a-zA-Z_/~][a-zA-Z0-9_/:=]*`   
-Required: No
-
 ## See Also<a name="API_DeploymentLaunchConfig_SeeAlso"></a>
 
 For more information about using this API in one of the language\-specific AWS SDKs, see the following:

@@ -4,8 +4,10 @@ To help you manage your simulation jobs, you can optionally assign your own meta
 
 This section includes information about using ROS command\-line tools and code\. For more information about managing tags with the AWS RoboMaker API, see [TagResource](https://docs.aws.amazon.com/robomaker/latest/dg/API_TagResource.html)\. For more information about tagging, see [Tagging Your AWS RoboMaker Resources](tagging-robomaker.md)\. 
 
+You must have permissions to tag, untag, and list tags for a simulation job\. For more information, see [Permissions Required to use Tags from a ROS Application or ROS Command Line](auth-and-access-control.md#auth_access_required-permissions-iam-eventing)\. 
+
 **Note**  
-You must have permissions to tag, untag, and list tags for a simulation job\. For more information, see [Permissions Required to use Tags from a ROS Application or ROS Command Line](auth-and-access-control.md#auth_access_required-permissions-iam-eventing)\.
+This topic applies to ROS Kinetic and ROS Melodic\. For more information about ROS 2 Dashing, see [ROS 2 Dashing \(Beta\)](robomaker-ros2-beta.md)\. 
 
 ## Using tags using ROS command\-line tools<a name="simulation-job-tags-tools"></a>
 
@@ -55,7 +57,10 @@ The following example provides a Python function you can use to manage tags in y
 # before using, add a dependency on the AWS RoboMaker package
 # in package.xml to access the service (.srv) types:
 # 
-#     <depend>aws_robomaker_simulation_ros_pkgs</depend>
+#     <depend>aws_robomaker_simulation_ros_pkgs</deped>
+#
+# See the repo at https://github.com/aws-robotics/aws-robomaker-simulation-ros-pkgs.
+#
 import rospy
 from robomaker_simulation_msgs.msg import Tag
 from robomaker_simulation_msgs.srv import AddTags
@@ -71,3 +76,5 @@ def add_tags(tags):
     else:
         rospy.logerr("Add tags request failed for tags (%s): %s", tags, response.message)
 ```
+
+For more information about ``

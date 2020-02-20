@@ -58,8 +58,6 @@ You are responsible for configuring a secure remote connection to the simulation
 
 1. Type a **name** for the robot application\.
 
-1. Select the ROS **Software suite name** and **Software suite version** used by your robot application\. 
-
 1. Under **Sources**, specify the Amazon S3 location for the **X86\_64** robot application source\. AWS RoboMaker simulation jobs require an **X86\_64** source to run the simulation\. 
 
    Optionally, if you plan on deploying the robot application to robots in a fleet, you can provide **ARMHF** and **ARM64** robot application source files\. You can also update the robot application to include additional source files\. For more information, see [Updating a Robot Application](update-robot-application.md)\.
@@ -82,11 +80,9 @@ You are responsible for configuring a secure remote connection to the simulation
 
 1. Type a **name** for the simulation application\.
 
-1. Select the **Software suite name** and **Software suite version** used by your simulation application\. 
+1. Select the **Simulation software suite** and **Simulation rendering version** used by your simulation application\. 
 
-1. Select the **Render engine** and **Render engine version** used by your simulation application\. 
-
-1. Select **S3**, and then specify the path to your simulation application\. 
+1. Under **Sources**, specify the Amazon S3 location for the **X86\_64** simulation application source\. AWS RoboMaker simulation jobs require an **X86\_64** source to run the simulation\. 
 
 1. In **Simulation application configuration**, provide the roslaunch **Launch package name** and the roslaunch **Launch file** for your simulation application\. 
 
@@ -103,7 +99,7 @@ You are responsible for configuring a secure remote connection to the simulation
 Here's an example AWS CLI command that performs the equivalent of the console\-based simulation job creation on the other tab\.  
 
 ```
-$ aws robomaker create-simulation-job --max-job-duration-in-seconds 3600 --iam-role arn:aws:iam::111111111111:role/MyRole --robot-applications application=arn:aws:robomaker:us-west-2:111111111111:robot-application/MyRobotApplication/1551203485821,launchConfig={packageName=hello_world_robot,launchFile=rotate.launch} --simulation-applications application=arn:aws:robomaker:us-west-2:111111111111:simulation-application/MySimulationApplication/1551203427605,launchConfig={packageName=hello_world_simulation,launchFile=empty_world.launch} --tags Region=North
+$ aws robomaker create-simulation-job --max-job-duration-in-seconds 3600 --iam-role arn:aws:iam::111111111111:role/MyRole --robot-applications application=arn:aws:robomaker:us-west-2:111111111111:robot-application/MyRobotApplication/1551203485821,launchConfig="{packageName=hello_world_robot,launchFile=rotate.launch}" --simulation-applications application=arn:aws:robomaker:us-west-2:111111111111:simulation-application/MySimulationApplication/1551203427605,launchConfig="{packageName=hello_world_simulation,launchFile=empty_world.launch}" --tags Region=North
 ```
 
 ------
@@ -147,8 +143,6 @@ To learn more about how you are charged for AWS RoboMaker see [AWS RoboMaker Pri
 1. On the **Specify robot application** page, under **Robot application**, select **Create new application**\. Optionally, you can select **Choose existing application** to use a robot application that you have already created\.
 
 1. Type a **name** for the robot application\.
-
-1. Select the **Robot software suite** used by your robot application\. For more information about the Robot Operating System \(ROS\), see [www\.ros\.org](http://www.ros.org/)\. 
 
 1. Under **Sources**, specify the Amazon S3 location for the **X86\_64** robot application source\. AWS RoboMaker simulation jobs require an **X86\_64** source to run the simulation\. 
 

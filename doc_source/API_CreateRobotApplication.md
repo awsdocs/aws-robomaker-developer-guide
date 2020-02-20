@@ -43,7 +43,7 @@ Pattern: `[a-zA-Z0-9_\-]*`
 Required: Yes
 
  ** [robotSoftwareSuite](#API_CreateRobotApplication_RequestSyntax) **   <a name="robomaker-CreateRobotApplication-request-robotSoftwareSuite"></a>
-The robot software suite used by the robot application\.  
+The robot software suite \(ROS distribuition\) used by the robot application\.  
 Type: [RobotSoftwareSuite](API_RobotSoftwareSuite.md) object  
 Required: Yes
 
@@ -120,7 +120,7 @@ Length Constraints: Minimum length of 1\. Maximum length of 40\.
 Pattern: `[a-zA-Z0-9_.\-]*` 
 
  ** [robotSoftwareSuite](#API_CreateRobotApplication_ResponseSyntax) **   <a name="robomaker-CreateRobotApplication-response-robotSoftwareSuite"></a>
-The robot software suite used by the robot application\.  
+The robot software suite \(ROS distribution\) used by the robot application\.  
 Type: [RobotSoftwareSuite](API_RobotSoftwareSuite.md) object
 
  ** [sources](#API_CreateRobotApplication_ResponseSyntax) **   <a name="robomaker-CreateRobotApplication-response-sources"></a>

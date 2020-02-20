@@ -1,8 +1,8 @@
 # Configuring Permissions<a name="sample-applications-permissions"></a>
 
-When you launch a sample application in the AWS RoboMaker console, you can choose to provide an IAM role that is used to launch the sample application\. The permissions required vary by sample application\. This section describes the permissions needed to launch each sample application\. 
+When you launch a sample program in the AWS RoboMaker console, you can provide an IAM role to use\. The permissions vary by sample program\. This section describes what you need to launch each sample\. 
 
-For more information about creating an AWS Identity and Access Management role for a service, see [Creating a Role to Delegate Permissions to an AWS Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html)\.
+For more information about AWS Identity and Access Management roles, see [Creating a Role to Delegate Permissions to an AWS Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html)\.
 
 ## Minimum permissions<a name="sample-applications-permissions-many"></a>
 
@@ -11,7 +11,7 @@ To launch a sample application, you need a role that has:
 + A trust relationship with `lambda.amazonaws.com`\.
 + Sample application permissions\.
 
-Use the following permissions to launch the Hello world, Robot monitoring, Self\-driving, and the Object\-following sample applications\. Other sample applications require these permissions and a set of additional permissions\. 
+Use the following permissions to launch `Hello world`, `Robot monitoring`, `Self-driving`, and the `Object-following` samples\. Other samples use these permissions and a set of additional permissions\. 
 
 Replace `account#` with your account number\.
 
@@ -99,7 +99,7 @@ Replace `account#` with your account number\.
 
 ## Navigation<a name="sample-applications-permissions-nav"></a>
 
-In addition to the minimum required permissions [minimum permissions](#sample-applications-permissions-many), the navigation sample application requires the additional permissions listed below\.
+With the [minimum permissions](#sample-applications-permissions-many), the navigation sample program requires the permissions listed here\.
 
 Replace `account#` with your account number\. 
 
@@ -181,9 +181,9 @@ Replace `account#` with your account number\.
 
 ## Person detection<a name="sample-applications-permissions-detect"></a>
 
-In addition to the minimum required permissions [minimum permissions](#sample-applications-permissions-many), the person detection sample application requires a trust relationship with `rekognition.amazonaws.com`\. You must also attach the policy `arn:aws:iam::aws:policy/service-role/AmazonRekognitionServiceRole` to the role\. 
+With the [minimum permissions](#sample-applications-permissions-many), the person detection sample requires a trust relationship with `rekognition.amazonaws.com`\. Attach the policy `arn:aws:iam::aws:policy/service-role/AmazonRekognitionServiceRole` to the role\. 
 
-It also requires the additional permissions listed below\. Replace `account#` with your account number\. 
+This also requires the permissions listed here\. Replace `account#` with your account number\. 
 
 ```
 {
@@ -263,7 +263,7 @@ It also requires the additional permissions listed below\. Replace `account#` wi
 
 ## Voice commands<a name="sample-applications-permissions-voice"></a>
 
-In addition to the minimum required permissions [minimum permissions](#sample-applications-permissions-many), the voice command sample application requires the additional permissions listed below\.
+With the [minimum permissions](#sample-applications-permissions-many), the voice command sample requires the permissions listed below\.
 
 Replace `account#` with your account number\. 
 

@@ -69,7 +69,7 @@ To connect to your application using ROS Bridge
    <launch>
      <arg name="rosbridge_port" value="$(optenv ROSBRIDGE_PORT 8080)"/>
      <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" > 
-        <arg name="rosbridge_port" value="$(arg rosbridge_port)"/>
+        <arg name="port" value="$(arg rosbridge_port)"/>
      </include>
    </launch>
    ```

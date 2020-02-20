@@ -58,6 +58,10 @@ Specify a failure threshold percentage larger than concurrent deployment percent
 
 1.  Specify a **Robot deployment timeout**\. Deployment to an individual robot will stop if it does not complete before the amount of time specified\.
 
+1. Optionally, provide a **Download condition file in S3**\. The file is a script you can use to verify the robot is ready to download and install the deployment\. For example, you can check to see if the robot is in a charging station and not performing a task \(like flying or moving objects\)\.
+
+1. Optionally, you can **lock S3 file to the latest etag**\. The entity tag is a has of the Amazon S3 object and reflects changes to the contents of the file, not its metadata\. When selected, AWS RoboMaker will ensure that version is used during deployment\. 
+
 1. Optionally, under **Tags**, specify one or more tags for the deployment\. Tags are words or phrases that act as metadata for identifying and organizing your AWS resources\. Each tag consists of a key and a value\. You can manage tags for your deployment on the **Deployment details** page\.
 
    For more about tagging, see [Tagging Your AWS RoboMaker Rseources](https://docs.aws.amazon.com/robomaker/latest/dg/tagging.html)\. 

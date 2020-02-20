@@ -19,7 +19,7 @@ Executing post\-launch script\(s\) if provided\.
 Finished  
 Deployment is complete\.
 Type: String  
-Valid Values:` Validating | DownloadingExtracting | ExecutingPreLaunch | Launching | ExecutingPostLaunch | Finished`   
+Valid Values:` Validating | DownloadingExtracting | ExecutingDownloadCondition | ExecutingPreLaunch | Launching | ExecutingPostLaunch | Finished`   
 Required: No
 
  **estimatedTimeRemainingSeconds**   <a name="robomaker-Type-ProgressDetail-estimatedTimeRemainingSeconds"></a>

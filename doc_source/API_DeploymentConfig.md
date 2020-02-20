@@ -10,6 +10,11 @@ Type: Integer
 Valid Range: Minimum value of 1\. Maximum value of 100\.  
 Required: No
 
+ **downloadConditionFile**   <a name="robomaker-Type-DeploymentConfig-downloadConditionFile"></a>
+The download condition file\.  
+Type: [S3Object](API_S3Object.md) object  
+Required: No
+
  **failureThresholdPercentage**   <a name="robomaker-Type-DeploymentConfig-failureThresholdPercentage"></a>
 The percentage of deployments that need to fail before stopping deployment\.  
 Type: Integer  

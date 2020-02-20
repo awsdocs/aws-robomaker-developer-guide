@@ -27,7 +27,7 @@ Follow the steps under one of these tabs\.
 Here's an example AWS CLI command that performs the equivalent of the console\-based steps\.  
 
 ```
-$ aws robomaker update-robot-application ---application my-robot-application-arn --robot-software-suite name=ROS,version=Kinetic --sources architecture=X86_64,s3Bucket=my-bucket,s3Key=my-folder/cloud-watch-robot.tar
+$ aws robomaker update-robot-application ---application my-robot-application-arn --robot-software-suite name=ROS,version=Melodic --sources architecture=X86_64,s3Bucket=my-bucket,s3Key=my-folder/cloud-watch-robot.tar
 ```
 
 ------

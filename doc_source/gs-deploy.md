@@ -3,12 +3,12 @@
 In this section, you compile the Hello World robot application for the ARMHF platform, which is used by TurtleBot3\. You also create a robot in AWS RoboMaker and then configure your TurtleBot3 robot with AWS IoT Greengrass software\. Then you register the robot into a new fleet and deploy the application\.
 
 **Topics**
-+ [Prepare your TurtleBot3 robot](#gs-deploy-config)
-+ [Bundle and deploy Hello World robot application](#gs-deploy-bundle)
++ [Prepare your TurtleBot3 Robot](#gs-deploy-config)
++ [Bundle and Deploy Hello World Robot Application](#gs-deploy-bundle)
 
-## Prepare your TurtleBot3 robot<a name="gs-deploy-config"></a>
+## Prepare your TurtleBot3 Robot<a name="gs-deploy-config"></a>
 
-Before you can deploy a robot application to a physical robot, create the robot in AWS RoboMaker, configure your physical robot with AWS IoT Greengrass, and then create a fleet and register your robot into the fleet\.
+Before you can deploy a robot application to a physical robot, create the robot in AWS RoboMaker\. Next, configure your physical robot with AWS IoT Greengrass\. After that, create a fleet and register your robot into the fleet\.
 
 **To prepare your TurtleBot3 robot**
 
@@ -18,13 +18,14 @@ Before you can deploy a robot application to a physical robot, create the robot 
 
 1. Register your robot as part of the new fleet\. Follow the steps to **Register** your robot to your fleet in [Registering and Deregistering Robots](register-deregister-fleet.md)\.
 
-## Bundle and deploy Hello World robot application<a name="gs-deploy-bundle"></a>
+## Bundle and Deploy Hello World Robot Application<a name="gs-deploy-bundle"></a>
 
 In this section, bundle the Hello World application for the ARMHF architecture using a Docker image\. Then you copy the robot application bundle to an Amazon S3 bucket and deploy\.
 
-**Warning**  
-Bundling the robot application and simulation application might each take 20 minutes or more depending on your instance type\.  
-The AWS RoboMaker cross\-compilation container uses `colcon bundle` to package the compiled sources, which resolves the Debian packages for Ubuntu \(Bionic and Xenial\) provided in the ROS distros\. Packages not available in the ROS distros such as Debian packages for Raspbian are not supported by the cross\-compilation container\.
+Bundling the robot application and simulation application might each take 20 minutes or more depending on your instance type\.
+
+**Note**  
+The AWS RoboMaker cross\-compilation container uses `colcon bundle` to package the compiled sources\. This resolves the Debian packages for Ubuntu \(Bionic and Xenial\)\. The packages are provided in the ROS distributions\. Packages that are not available in the ROS distributions, such as Debian packages for Raspbian, are not supported by the cross\-compilation container\.
 
 **To bundle and deploy the Hello World robot application**
 
@@ -32,7 +33,9 @@ The AWS RoboMaker cross\-compilation container uses `colcon bundle` to package t
 
 1. On the left, expand **Development**, choose **Development environments**, select **HelloWorld**, and then select **Open IDE**\. It might take a few minutes to prepare the development environment\. 
 
-1. In the **HelloWorld** AWS Cloud9 development environment, choose the **bash** tab at the bottom of the page and then run the following commands to bundle the HelloWorld robot application for ARMHF:
+1. In the **HelloWorld** AWS Cloud9 development environment, choose the **bash** tab at the bottom of the page\. Next, run the following commands to bundle the **HelloWorld** robot application for ARMHF:
+**Note**  
+The following commands are for ROS Kinetic and ROS Melodic applications\.
 
    ```
    $ cd /opt/robomaker/cross-compilation-dockerfile/
@@ -47,7 +50,7 @@ The AWS RoboMaker cross\-compilation container uses `colcon bundle` to package t
    $ exit
    ```
 
-1. Before you can deploy the robot application, copy it to an Amazon S3 bucket AWS RoboMaker can access\. A bucket was created on your behalf for the HelloWorld robot application\. Find the name of the bucket using the following command:
+1. Before you can deploy the robot application, copy it to an Amazon S3 bucket that AWS RoboMaker can access\. A bucket was created on your behalf for the **HelloWorld** robot application\. Find the name of the bucket using the following command:
 
    ```
    $ aws s3 ls | grep "robomakerhelloworld"
@@ -65,7 +68,7 @@ The AWS RoboMaker cross\-compilation container uses `colcon bundle` to package t
 
 1. In the **Robot application details** page, in **Versions**, select **$LATEST**, and then choose **Update**\. 
 
-1. In the **Update robot application** page, in **Sources**, copy the **X86\_64** source file into the **ARMHF source file** field, then modify the robot application file name from **hello\-world\-robot\.tar** to **hello\-world\-robot\.*armhf*\.tar**, then select **Create**\.
+1. In the **Update robot application** page, in **Sources**, specify the location of the **ARMHF** bundle from step 4 in the **ARMHF source file** field, then select **Create**\.
 
 1. In the **Robot application details** page, in **Versions**, select **Create new version**, and then choose **Create**\. 
 
@@ -75,7 +78,7 @@ The AWS RoboMaker cross\-compilation container uses `colcon bundle` to package t
 
 1. In **Deployment launch config**, type in **hello\_world\_robot** for **Package name**\. Then type in **deploy\_rotate\.launch** for **Launch file**\. 
 
-1. In **Deployment config**, accept the default values for **Concurrent deployment percentags** and **Failure threshold percentage**\. 
+1. In **Deployment config**, accept the default values for **Concurrent deployment percentages** and **Failure threshold percentage**\. 
 
 1. Select **Create**\. You can track the deployment status and deployment progress detail on the **deployment details** page\. 
 

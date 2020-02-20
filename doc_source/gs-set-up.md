@@ -24,11 +24,11 @@ Write down your AWS account ID because you'll need it for the next task\.
 
 ## Create an IAM Administrator and Sign in<a name="gs-account-user"></a>
 
-When you create an AWS account, you get a single sign\-in identity that has access to all of the AWS services and resources in the account\. This identity is called the AWS account *root user*\. When you sign in to the AWS Management Console with the credentials that you used to create the account, you have access to all of the AWS resources in your account\. 
+When you create an AWS account, you get a single sign\-in identity\. This allows access to all of the AWS services and resources in the account\. This identity is called the AWS account *root user*\. When you sign in to the AWS Management Console with the credentials that you used to create the account, you have access to all of the AWS resources in your account\. 
 
 We strongly recommend that you *not* use the root user for everyday tasks, even the administrative ones\. Instead, adhere to the [Create Individual IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users)\. Create an AWS Identity and Access Management \(IAM\) user with administrator permissions\. Then, securely store your root user credentials and use them to perform only a few account and service management tasks\. 
 
-**To create an IAM user with administrator permissions and sign in to the console**
+**To create an IAM user with administrator permissions, and sign in to the console**
 
 1. Create an account with administrator permissions in your AWS account\. For instructions, see [Creating Your First IAM User and Administrators Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) in the *IAM User Guide*\.
 **Note**  

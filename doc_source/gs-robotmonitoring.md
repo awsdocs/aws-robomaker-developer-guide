@@ -1,6 +1,6 @@
 # Robot Monitoring<a name="gs-robotmonitoring"></a>
 
-This section provides an example of how to monitor health and operational metrics for a robot in a simulated bookstore using Amazon CloudWatch Metrics and Amazon CloudWatch Logs\. The streams metrics including speed, distance to nearest obstacle, distance to current goal, robot CPU utilization, and RAM usage\. 
+This section shows how to monitor health and operational metrics for a robot in a simulated bookstore using Amazon CloudWatch Metrics and Amazon CloudWatch Logs\. The streams metrics including speed, distance to nearest obstacle, distance to current goal, robot CPU utilization, and RAM usage\. 
 
 Before you use AWS RoboMaker for the first time, complete the tasks in [Create an Account](gs-set-up.md)\. Then, in the AWS RoboMaker console, launch the Robot Monitoring sample application\.
 

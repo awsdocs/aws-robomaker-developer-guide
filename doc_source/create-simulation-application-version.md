@@ -1,9 +1,9 @@
 # Creating a Simulation Application Version<a name="create-simulation-application-version"></a>
 
-When you create a simulation application version, you create an immutable snapshot of the $LATEST version\. It cannot be updated, so it will not change even if the $LATEST version is updated\.
+When you create a simulation application version, you create an immutable snapshot of the $LATEST version\. It cannot be updated\. It will not change even if the $LATEST version is updated\.
 
 **To create a simulation application version**  
-Follow the steps under one of the following tabs:
+Follow the steps under one of the following tabs\.
 
 ------
 #### [ Using the console ]<a name="proc-create-simulation-application-version-con"></a>

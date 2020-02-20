@@ -17,7 +17,7 @@ To use the AWS RoboMaker cloud extensions, you must have:
 + An AWS account\. To sign up for an AWS account, see [Step 1: Create an AWS Account and an Administrator](gs-set-up.md)\. 
 + AWS credentials\. These credentials are used to access AWS services\. 
 + Configure IAM role permissions to allow AWS RoboMaker cloud extensions to use AWS services\. The permissions needed are included in the README files included with each extension\.
-+ ROS Kinetic on Ubuntu 16\.04 or ROS Melodic on Ubuntu 18\.04\. If you are using an AWS RoboMaker development environment, it is preconfigured for robotics development with ROS\. 
++ ROS Kinetic on Ubuntu 16\.04, ROS Melodic on Ubuntu 18\.04, or ROS 2 Dashing on Ubuntu 18\.04\. If you are using an AWS RoboMaker development environment, it is preconfigured for robotics development with the chosen distribution\. For more information about ROS 2 Dashing, see [ROS 2 Dashing \(Beta\)](robomaker-ros2-beta.md)\.\.
 
 ## Installing AWS RoboMaker cloud extensions<a name="cloud-services-integration-install"></a>
 

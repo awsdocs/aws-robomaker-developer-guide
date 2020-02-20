@@ -1,6 +1,6 @@
 # Important Licensing Information<a name="gs-info"></a>
 
-AWS RoboMaker sample applications include third\-party software licensed under open\-source licenses and is provided for demonstration purposes only\. Incorporation or use of RoboMaker sample applications in connection with your production workloads or a commercial products or devices may affect your legal rights or obligations under the applicable open\-source licenses\. Source file information is included in the readme file of each sample application:
+AWS RoboMaker sample applications include third\-party software licensed under open\-source licenses\. The samples are provided for demonstration purposes only\. Incorporation or use of AWS RoboMaker sample applications in connection with your production workloads or commercial products or devices may affect your legal rights or obligations under the applicable open\-source license\. Source file information is included in the `readme` file of each sample application\.
 + [Hello World](https://github.com/aws-robotics/aws-robomaker-sample-application-helloworld)
 + [Navigation and Person Recognition](https://github.com/aws-robotics/aws-robomaker-sample-application-persondetection)
 + [Voice Commands](https://github.com/aws-robotics/aws-robomaker-sample-application-voiceinteraction)

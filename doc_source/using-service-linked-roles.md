@@ -16,6 +16,7 @@ The AWSServiceRoleForRoboMaker service\-linked role trusts the following service
 + `robomaker.amazonaws.com`
 
 The role permissions policy allows AWS RoboMaker to complete the following actions on the specified resources:
++ Create and cancel a simulation job created as part of a simulation job batch
 + Manage Amazon EC2 networking resources
 + Manage AWS IoT Greengrass deployments 
 
@@ -25,7 +26,7 @@ You must configure permissions to allow an IAM entity \(such as a user, group, o
 
 You don't need to manually create a service\-linked role\. When you SimulationJob or DeploymentJob in the AWS Management Console, the AWS CLI, or the AWS API, AWS RoboMaker creates the service\-linked role for you\. 
 
-If you delete this service\-linked role, and then need to create it again, you can use the same process to recreate the role in your account\. When you SimulationJob or DeploymentJob AWS RoboMaker creates the service\-linked role for you again\. 
+If you delete this service\-linked role, and then need to create it again, you can use the same process to recreate the role in your account\. When you create a SimulationJob, SimulationJobBatch, or DeploymentJob, AWS RoboMaker creates the service\-linked role for you again\. 
 
 You can also use the IAM console to create a service\-linked role with the **RoboMaker** use case\. In the AWS CLI or the AWS API, create a service\-linked role with the `robomaker.amazonaws.com` service name\. For more information, see [Creating a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#create-service-linked-role) in the *IAM User Guide*\. If you delete this service\-linked role, you can use this same process to create the role again\.
 
@@ -66,9 +67,9 @@ AWS RoboMaker does not support using service\-linked roles in every region where
 | Asia Pacific \(Sydney\) | ap\-southeast\-2 | Yes | 
 | Asia Pacific \(Tokyo\) | ap\-northeast\-1 | Yes | 
 | Canada \(Central\) | ca\-central\-1 | Yes | 
-| EU \(Frankfurt\) | eu\-central\-1 | Yes | 
-| EU \(Ireland\) | eu\-west\-1 | Yes | 
-| EU \(London\) | eu\-west\-2 | Yes | 
-| EU \(Paris\) | eu\-west\-3 | Yes | 
+| Europe \(Frankfurt\) | eu\-central\-1 | Yes | 
+| Europe \(Ireland\) | eu\-west\-1 | Yes | 
+| Europe \(London\) | eu\-west\-2 | Yes | 
+| Europe \(Paris\) | eu\-west\-3 | Yes | 
 | South America \(São Paulo\) | sa\-east\-1 | Yes | 
 | AWS GovCloud \(US\) | us\-gov\-west\-1 | No | 
