@@ -67,7 +67,7 @@ A simulation application contains all of the assets and logic needed to simulate
 1. Copy the simulation application source bundle to your Amazon S3 bucket\. The simulation application must be built for the `X86_64` platform\. The bundle might be `.tar` or `.tar.gz` extension\.
 
    ```
-   $ aws s3 cp simulation_app/bundle/robot_ws/bundle/output.tar.gz s3://MyApplicationSource/my-simulation-application.tar.gz
+   $ aws s3 cp simulation_ws/bundle/output.tar.gz s3://MyApplicationSource/my-simulation-application.tar.gz
    ```
 
 1. Create a simulation application in AWS RoboMaker\. 
