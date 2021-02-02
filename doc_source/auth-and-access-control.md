@@ -40,7 +40,7 @@ To use AWS RoboMaker or to manage authorization and access control for yourself 
 
 To access the AWS RoboMaker console, you must have a minimum set of permissions that allows you to list and view details about the AWS RoboMaker resources in your AWS account\. If you create an identity\-based permissions policy that is more restrictive than the minimum required permissions, the console won't function as intended for entities with that policy\.
 
-For full access to the AWS RoboMaker console, use the **AWSRoboMakerFullAccess** policy\. 
+For full access to the AWS RoboMaker console, use the **AWSRoboMaker\_FullAccess** policy\. 
 
 For read\-only access to the AWS RoboMaker console, use the **AWSRoboMakerReadOnlyAccess** policy\.
 
@@ -61,7 +61,26 @@ For example, you can attach the following policy to a user\. It provides permiss
 }
 ```
 
-You don't need to allow minimum console permissions for users that are making calls only to the AWS CLI or the AWS API\. Instead, you need only the permissions that match the API operation you're trying to perform\.
+You don't need to allow minimum console permissions for users that are making calls only to the AWS CLI or the AWS API\. Instead, you need only the permissions that match the API operation you're trying to perform\. 
+
+### Permissions Required to View Worlds in the AWS RoboMaker in the Console<a name="auth_access_required-permissions-view-worlds"></a>
+
+You can grant permissions required to view AWS RoboMaker worlds in the AWS RoboMaker console by attaching the following policy to a user: 
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "robomaker: DescribeWorldForgeImageRedirect "
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}
+```
 
 ### Permissions Required to Use the AWS RoboMaker Simulation Tools<a name="auth_access_required-permissions-tools"></a>
 
@@ -71,7 +90,7 @@ The IAM user or role used to create simulation will automatically have permissio
 
 To manage your own credentials, such as your password, access keys, and multi\-factor authentication \(MFA\) devices, your administrator must grant you the required permissions\. To view the policy that includes these permissions, see [Allow Users to Self\-Manage Their Credentials](auth_access_getting-started.md#auth_access_manage-password-mfa)\.
 
-As an AWS administrator, you need full access to IAM so that you can create and manage users, groups, roles, and policies in IAM\. You should use the [AdministratorAccess](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/AdministratorAccess) AWS managed policy that includes full access to all of AWS\. This policy does not provide access to the AWS Billing and Cost Management console or allow tasks that require root user credentials\. For more information, see [AWS Tasks That Require AWS Account Root User Credentials](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html) in the *AWS General Reference*\.
+As an AWS administrator, you need full access to IAM so that you can create and manage users, groups, roles, and policies in IAM\. You should use the [AdministratorAccess](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/AdministratorAccess) AWS managed policy that includes full access to all of AWS\. This policy does not provide access to the AWS Billing and Cost Management console or allow tasks that require root user credentials\. For more information, see [AWS Tasks That Require AWS account root user Credentials](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html) in the *AWS General Reference*\.
 
 **Warning**  
 Only an administrator user should have full access to AWS\. Anyone with this policy has permission to fully manage authentication and access control, in addition to modifying every resource in AWS\. To learn how to create this user, see [Create your IAM Admin User](auth_access_getting-started.md#auth_access_setup-iam-admin)\.

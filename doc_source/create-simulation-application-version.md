@@ -1,6 +1,8 @@
 # Creating a Simulation Application Version<a name="create-simulation-application-version"></a>
 
-When you create a simulation application version, you create an immutable snapshot of the $LATEST version\. It cannot be updated\. It will not change even if the $LATEST version is updated\.
+When you create a simulation application version, you create a snapshot of the `$LATEST` version\. AWS RoboMaker remembers the Amazon S3 path and ETag of the file for the version\. If you change the file at the Amazon S3 path of that version, AWS RoboMaker will not be able to use that version\. AWS RoboMaker does not keep a copy of the version\. 
+
+You can use any version of a robot simulation application when you create a simulation job\. For more information about application versioning, see [Application Versioning](application-versioning.md)\. 
 
 **To create a simulation application version**  
 Follow the steps under one of the following tabs\.

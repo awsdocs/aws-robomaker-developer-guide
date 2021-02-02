@@ -1,10 +1,8 @@
 # Creating a Robot Application Version<a name="create-robot-application-version"></a>
 
-When you create a robot application, there is only one version—the `$LATEST` version\. The `$LATEST` version can be updated with new a new version of the application any time\. If many people are making changes, or the robot application is updated frequently, you might not know all the details about the `$LATEST` version\. 
+When you create a robot application version, you create a snapshot of the `$LATEST` version\. AWS RoboMaker remembers the Amazon S3 path and ETag of the file for the version\. If you change the file at the Amazon S3 path of that version, AWS RoboMaker will not be able to use that version\. AWS RoboMaker does not keep a copy of the version\. 
 
-When you create a robot application version, you create an immutable snapshot of the `$LATEST` version\. It cannot be updated, so it will not change even if the `$LATEST` version is updated\. This is useful for deployments, when you need to have the same version on all of the robots in a fleet\.
-
-You can use any version of a robot application when you create a simulation job\. For deployments, you must use a numbered version\.
+You can use any version of a robot application when you create a simulation job\. For deployments, you must use a numbered version\. For more information about application versioning, see [Application Versioning](application-versioning.md)\. 
 
 **To create a robot application version**  
 Follow the steps under one of these tabs\.

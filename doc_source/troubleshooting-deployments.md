@@ -14,6 +14,8 @@ A robot must be part of a fleet to receive a deployment\. To check the status of
 
 To configure and run the AWS IoT Greengrass core software, follow the steps in [Module 1: Environment Setup for Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/module1.html), then follow the steps in [Start AWS Greengrass on the Core Device](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-device-start.html)\. 
 
+For more information about how you can verify your device supports AWS IoT Greengrass, see [https://docs.aws.amazon.com/greengrass/latest/developerguide/device-tester-for-greengrass-ug.html](https://docs.aws.amazon.com/greengrass/latest/developerguide/device-tester-for-greengrass-ug.html)AWS IoT Device Tester for AWS IoT Greengrass\.
+
 ### Is a Resource Missing?<a name="troubleshooting-deployments-resource-not-found"></a>
 
 In the deployment details page, review the **Failure reason**\. It will list the missing resource\. Verify that the resource exists\. For example, if the robot application is missing, it might have been deleted from the Amazon S3 location\. Also, the Amazon S3 ETag information might be incorrect\. 
@@ -94,3 +96,9 @@ You can override or link the deployed bundle to use local ROS libraries\. To do 
 ```
 "ROS_ROOT":"/opt/ros/kinetic/share/ros"
 ```
+
+## Did you get a Robot Application version ETag mismatch?<a name="troubleshooting-deployments-etag"></a>
+
+This happens when the source file \(Amazon S3 object\) of the robot application version you selected was modified since the version was created and the Etag no longer matches\. When you create a robot application version, AWS RoboMaker remembers the Amazon S3 path and the ETag of the version\. You must not remove or modify the version\.
+
+To resolve the issue, locate an unmodified version of the source file, use a different version or create a new version\. For more information about application versioning, see [Application Versioning](application-versioning.md)\. 

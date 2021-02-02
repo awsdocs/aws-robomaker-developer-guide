@@ -9,27 +9,27 @@ POST /createSimulationApplication HTTP/1.1
 Content-type: application/json
 
 {
-   "[name](#robomaker-CreateSimulationApplication-request-name)": "string",
-   "[renderingEngine](#robomaker-CreateSimulationApplication-request-renderingEngine)": { 
-      "[name](API_RenderingEngine.md#robomaker-Type-RenderingEngine-name)": "string",
-      "[version](API_RenderingEngine.md#robomaker-Type-RenderingEngine-version)": "string"
+   "name": "string",
+   "renderingEngine": { 
+      "name": "string",
+      "version": "string"
    },
-   "[robotSoftwareSuite](#robomaker-CreateSimulationApplication-request-robotSoftwareSuite)": { 
-      "[name](API_RobotSoftwareSuite.md#robomaker-Type-RobotSoftwareSuite-name)": "string",
-      "[version](API_RobotSoftwareSuite.md#robomaker-Type-RobotSoftwareSuite-version)": "string"
+   "robotSoftwareSuite": { 
+      "name": "string",
+      "version": "string"
    },
-   "[simulationSoftwareSuite](#robomaker-CreateSimulationApplication-request-simulationSoftwareSuite)": { 
-      "[name](API_SimulationSoftwareSuite.md#robomaker-Type-SimulationSoftwareSuite-name)": "string",
-      "[version](API_SimulationSoftwareSuite.md#robomaker-Type-SimulationSoftwareSuite-version)": "string"
+   "simulationSoftwareSuite": { 
+      "name": "string",
+      "version": "string"
    },
-   "[sources](#robomaker-CreateSimulationApplication-request-sources)": [ 
+   "sources": [ 
       { 
-         "[architecture](API_SourceConfig.md#robomaker-Type-SourceConfig-architecture)": "string",
-         "[s3Bucket](API_SourceConfig.md#robomaker-Type-SourceConfig-s3Bucket)": "string",
-         "[s3Key](API_SourceConfig.md#robomaker-Type-SourceConfig-s3Key)": "string"
+         "architecture": "string",
+         "s3Bucket": "string",
+         "s3Key": "string"
       }
    ],
-   "[tags](#robomaker-CreateSimulationApplication-request-tags)": { 
+   "tags": { 
       "string" : "string" 
    }
 }
@@ -73,6 +73,7 @@ Required: Yes
  ** [tags](#API_CreateSimulationApplication_RequestSyntax) **   <a name="robomaker-CreateSimulationApplication-request-tags"></a>
 A map that contains tag keys and tag values that are attached to the simulation application\.  
 Type: String to string map  
+Map Entries: Minimum number of 0 items\. Maximum number of 50 items\.  
 Key Length Constraints: Minimum length of 1\. Maximum length of 128\.  
 Key Pattern: `[a-zA-Z0-9 _.\-\/+=:]*`   
 Value Length Constraints: Minimum length of 0\. Maximum length of 256\.  
@@ -86,34 +87,34 @@ HTTP/1.1 200
 Content-type: application/json
 
 {
-   "[arn](#robomaker-CreateSimulationApplication-response-arn)": "string",
-   "[lastUpdatedAt](#robomaker-CreateSimulationApplication-response-lastUpdatedAt)": number,
-   "[name](#robomaker-CreateSimulationApplication-response-name)": "string",
-   "[renderingEngine](#robomaker-CreateSimulationApplication-response-renderingEngine)": { 
-      "[name](API_RenderingEngine.md#robomaker-Type-RenderingEngine-name)": "string",
-      "[version](API_RenderingEngine.md#robomaker-Type-RenderingEngine-version)": "string"
+   "arn": "string",
+   "lastUpdatedAt": number,
+   "name": "string",
+   "renderingEngine": { 
+      "name": "string",
+      "version": "string"
    },
-   "[revisionId](#robomaker-CreateSimulationApplication-response-revisionId)": "string",
-   "[robotSoftwareSuite](#robomaker-CreateSimulationApplication-response-robotSoftwareSuite)": { 
-      "[name](API_RobotSoftwareSuite.md#robomaker-Type-RobotSoftwareSuite-name)": "string",
-      "[version](API_RobotSoftwareSuite.md#robomaker-Type-RobotSoftwareSuite-version)": "string"
+   "revisionId": "string",
+   "robotSoftwareSuite": { 
+      "name": "string",
+      "version": "string"
    },
-   "[simulationSoftwareSuite](#robomaker-CreateSimulationApplication-response-simulationSoftwareSuite)": { 
-      "[name](API_SimulationSoftwareSuite.md#robomaker-Type-SimulationSoftwareSuite-name)": "string",
-      "[version](API_SimulationSoftwareSuite.md#robomaker-Type-SimulationSoftwareSuite-version)": "string"
+   "simulationSoftwareSuite": { 
+      "name": "string",
+      "version": "string"
    },
-   "[sources](#robomaker-CreateSimulationApplication-response-sources)": [ 
+   "sources": [ 
       { 
-         "[architecture](API_Source.md#robomaker-Type-Source-architecture)": "string",
-         "[etag](API_Source.md#robomaker-Type-Source-etag)": "string",
-         "[s3Bucket](API_Source.md#robomaker-Type-Source-s3Bucket)": "string",
-         "[s3Key](API_Source.md#robomaker-Type-Source-s3Key)": "string"
+         "architecture": "string",
+         "etag": "string",
+         "s3Bucket": "string",
+         "s3Key": "string"
       }
    ],
-   "[tags](#robomaker-CreateSimulationApplication-response-tags)": { 
+   "tags": { 
       "string" : "string" 
    },
-   "[version](#robomaker-CreateSimulationApplication-response-version)": "string"
+   "version": "string"
 }
 ```
 
@@ -164,6 +165,7 @@ Type: Array of [Source](API_Source.md) objects
  ** [tags](#API_CreateSimulationApplication_ResponseSyntax) **   <a name="robomaker-CreateSimulationApplication-response-tags"></a>
 The list of all tags added to the simulation application\.  
 Type: String to string map  
+Map Entries: Minimum number of 0 items\. Maximum number of 50 items\.  
 Key Length Constraints: Minimum length of 1\. Maximum length of 128\.  
 Key Pattern: `[a-zA-Z0-9 _.\-\/+=:]*`   
 Value Length Constraints: Minimum length of 0\. Maximum length of 256\.  
@@ -210,8 +212,8 @@ For more information about using this API in one of the language\-specific AWS S
 +  [AWS SDK for \.NET](https://docs.aws.amazon.com/goto/DotNetSDKV3/robomaker-2018-06-29/CreateSimulationApplication) 
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/CreateSimulationApplication) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/CreateSimulationApplication) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/CreateSimulationApplication) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/CreateSimulationApplication) 
 +  [AWS SDK for JavaScript](https://docs.aws.amazon.com/goto/AWSJavaScriptSDK/robomaker-2018-06-29/CreateSimulationApplication) 
 +  [AWS SDK for PHP V3](https://docs.aws.amazon.com/goto/SdkForPHPV3/robomaker-2018-06-29/CreateSimulationApplication) 
 +  [AWS SDK for Python](https://docs.aws.amazon.com/goto/boto3/robomaker-2018-06-29/CreateSimulationApplication) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/CreateSimulationApplication) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/CreateSimulationApplication) 

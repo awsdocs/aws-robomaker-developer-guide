@@ -21,9 +21,11 @@ Amazon S3 objects must be located in the same region as AWS RoboMaker\.
 
 1. Select the **ROS distribution** used by your robot application\. For more information about the Robot Operating System \(ROS\), see [www\.ros\.org](http://www.ros.org/)\. 
 
-1. Provide the Amazon S3 path to your bundled robot application file\. If this robot application is used only in simulations, specify a bundle built for the **X86\_64** platform\. If you use this robot application in a fleet deployment, specify one or more bundles that represent the architectures of the robots in your fleet\. 
+1. Provide the Amazon S3 path to your bundled robot application file\. If this robot application is used only in simulations, specify a bundle built for the **X86\_64** architecture\. If you use this robot application in a fleet deployment, specify one or more bundles that represent the architectures of the robots in your fleet\. 
 
    Optionally, choose **Create new S3 folder** to go to the Amazon Simple Storage Service AWS Management Console to create and manage buckets\.
+
+   Using `$LATEST` doesn’t protect you from changes in Amazon S3\. When AWS RoboMaker access the file, it will set to read only\. For more informatiom about versioning in AWS RoboMaker, see [Application Versioning](application-versioning.md)\. 
 
 1. Optionally, under **Tags**, specify one or more tags for the simulation application\. Tags are words or phrases that act as metadata for identifying and organizing your AWS resources\. Each tag consists of a key and a value\. You can manage tags for your simulation application on the **Simulation application details** page\.
 

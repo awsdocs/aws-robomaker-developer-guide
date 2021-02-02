@@ -23,9 +23,11 @@ Amazon S3 objects must be located in the same Region as AWS RoboMaker\.
 
 1. Select the **Simulation rendering engine** used by your simulation application\. 
 
-1. Provide the Amazon S3 path to your bundled simulation application file built for the **X86\_64** platform\. 
+1. Provide the Amazon S3 path to your bundled simulation application file built for the **X86\_64** architecture\. 
 
    \(Optional\) select **Create new S3 folder** to go to the Amazon Simple Storage Service console\. There, you can create and manage buckets\.
+
+   Using `$LATEST` doesn’t protect you from changes in Amazon S3\. When AWS RoboMaker access the file, it will set to read only\. For more informatiom about versioning in AWS RoboMaker, see [Application Versioning](application-versioning.md)\. 
 
 1. \(Optional\) Under **Tags**, specify one or more tags for the simulation application\. Tags are words or phrases that act as metadata to identify your AWS resources\. Each tag consists of a key and a value\. You can manage tags for your simulation on the **Simulation application details** page\.
 

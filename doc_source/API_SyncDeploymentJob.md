@@ -9,8 +9,8 @@ POST /syncDeploymentJob HTTP/1.1
 Content-type: application/json
 
 {
-   "[clientRequestToken](#robomaker-SyncDeploymentJob-request-clientRequestToken)": "string",
-   "[fleet](#robomaker-SyncDeploymentJob-request-fleet)": "string"
+   "clientRequestToken": "string",
+   "fleet": "string"
 }
 ```
 
@@ -43,37 +43,37 @@ HTTP/1.1 200
 Content-type: application/json
 
 {
-   "[arn](#robomaker-SyncDeploymentJob-response-arn)": "string",
-   "[createdAt](#robomaker-SyncDeploymentJob-response-createdAt)": number,
-   "[deploymentApplicationConfigs](#robomaker-SyncDeploymentJob-response-deploymentApplicationConfigs)": [ 
+   "arn": "string",
+   "createdAt": number,
+   "deploymentApplicationConfigs": [ 
       { 
-         "[application](API_DeploymentApplicationConfig.md#robomaker-Type-DeploymentApplicationConfig-application)": "string",
-         "[applicationVersion](API_DeploymentApplicationConfig.md#robomaker-Type-DeploymentApplicationConfig-applicationVersion)": "string",
-         "[launchConfig](API_DeploymentApplicationConfig.md#robomaker-Type-DeploymentApplicationConfig-launchConfig)": { 
-            "[environmentVariables](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-environmentVariables)": { 
+         "application": "string",
+         "applicationVersion": "string",
+         "launchConfig": { 
+            "environmentVariables": { 
                "string" : "string" 
             },
-            "[launchFile](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-launchFile)": "string",
-            "[packageName](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-packageName)": "string",
-            "[postLaunchFile](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-postLaunchFile)": "string",
-            "[preLaunchFile](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-preLaunchFile)": "string"
+            "launchFile": "string",
+            "packageName": "string",
+            "postLaunchFile": "string",
+            "preLaunchFile": "string"
          }
       }
    ],
-   "[deploymentConfig](#robomaker-SyncDeploymentJob-response-deploymentConfig)": { 
-      "[concurrentDeploymentPercentage](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-concurrentDeploymentPercentage)": number,
-      "[downloadConditionFile](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-downloadConditionFile)": { 
-         "[bucket](API_S3Object.md#robomaker-Type-S3Object-bucket)": "string",
-         "[etag](API_S3Object.md#robomaker-Type-S3Object-etag)": "string",
-         "[key](API_S3Object.md#robomaker-Type-S3Object-key)": "string"
+   "deploymentConfig": { 
+      "concurrentDeploymentPercentage": number,
+      "downloadConditionFile": { 
+         "bucket": "string",
+         "etag": "string",
+         "key": "string"
       },
-      "[failureThresholdPercentage](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-failureThresholdPercentage)": number,
-      "[robotDeploymentTimeoutInSeconds](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-robotDeploymentTimeoutInSeconds)": number
+      "failureThresholdPercentage": number,
+      "robotDeploymentTimeoutInSeconds": number
    },
-   "[failureCode](#robomaker-SyncDeploymentJob-response-failureCode)": "string",
-   "[failureReason](#robomaker-SyncDeploymentJob-response-failureReason)": "string",
-   "[fleet](#robomaker-SyncDeploymentJob-response-fleet)": "string",
-   "[status](#robomaker-SyncDeploymentJob-response-status)": "string"
+   "failureCode": "string",
+   "failureReason": "string",
+   "fleet": "string",
+   "status": "string"
 }
 ```
 
@@ -133,11 +133,13 @@ Etag for RobotApplication does not match value during version creation\.
 SimulationApplicationVersionMismatchedEtag  
 Etag for SimulationApplication does not match value during version creation\.
 Type: String  
-Valid Values:` ResourceNotFound | EnvironmentSetupError | EtagMismatch | FailureThresholdBreached | RobotDeploymentAborted | RobotDeploymentNoResponse | RobotAgentConnectionTimeout | GreengrassDeploymentFailed | MissingRobotArchitecture | MissingRobotApplicationArchitecture | MissingRobotDeploymentResource | GreengrassGroupVersionDoesNotExist | ExtractingBundleFailure | PreLaunchFileFailure | PostLaunchFileFailure | BadPermissionError | DownloadConditionFailed | InternalServerError` 
+Valid Values:` ResourceNotFound | EnvironmentSetupError | EtagMismatch | FailureThresholdBreached | RobotDeploymentAborted | RobotDeploymentNoResponse | RobotAgentConnectionTimeout | GreengrassDeploymentFailed | InvalidGreengrassGroup | MissingRobotArchitecture | MissingRobotApplicationArchitecture | MissingRobotDeploymentResource | GreengrassGroupVersionDoesNotExist | LambdaDeleted | ExtractingBundleFailure | PreLaunchFileFailure | PostLaunchFileFailure | BadPermissionError | DownloadConditionFailed | InternalServerError` 
 
  ** [failureReason](#API_SyncDeploymentJob_ResponseSyntax) **   <a name="robomaker-SyncDeploymentJob-response-failureReason"></a>
 The failure reason if the job fails\.  
-Type: String
+Type: String  
+Length Constraints: Minimum length of 0\. Maximum length of 1024\.  
+Pattern: `.*` 
 
  ** [fleet](#API_SyncDeploymentJob_ResponseSyntax) **   <a name="robomaker-SyncDeploymentJob-response-fleet"></a>
 The Amazon Resource Name \(ARN\) of the fleet\.  
@@ -189,8 +191,8 @@ For more information about using this API in one of the language\-specific AWS S
 +  [AWS SDK for \.NET](https://docs.aws.amazon.com/goto/DotNetSDKV3/robomaker-2018-06-29/SyncDeploymentJob) 
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/SyncDeploymentJob) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/SyncDeploymentJob) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/SyncDeploymentJob) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/SyncDeploymentJob) 
 +  [AWS SDK for JavaScript](https://docs.aws.amazon.com/goto/AWSJavaScriptSDK/robomaker-2018-06-29/SyncDeploymentJob) 
 +  [AWS SDK for PHP V3](https://docs.aws.amazon.com/goto/SdkForPHPV3/robomaker-2018-06-29/SyncDeploymentJob) 
 +  [AWS SDK for Python](https://docs.aws.amazon.com/goto/boto3/robomaker-2018-06-29/SyncDeploymentJob) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/SyncDeploymentJob) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/SyncDeploymentJob) 

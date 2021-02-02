@@ -14,7 +14,10 @@ To deploy a robot application to a physical robot, the physical robot must be co
 
 1. Monitor the deployment\. You can track the progress of your deployment and other information in **deployment details**\. Customize your robot application to provide additional information by using AWS RoboMaker cloud extensions\.
 
-You can learn how to do these steps in [Getting Started with AWS RoboMaker](getting-started.md)\.
+You can learn how to do these steps in [Getting Started with AWS RoboMaker](getting-started-robomaker.md)\.
+
+**Note**  
+AWS RoboMaker does not support over\-the\-air deployments if you are running [AWS IoT Greengrass in a Docker container](https://docs.aws.amazon.com/greengrass/latest/developerguide/run-gg-in-docker-container.html) on the robot\.
 
 ## How Robot Applications are Deployed<a name="deployment-details"></a>
 

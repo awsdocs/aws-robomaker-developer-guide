@@ -9,8 +9,8 @@ POST /deleteSimulationApplication HTTP/1.1
 Content-type: application/json
 
 {
-   "[application](#robomaker-DeleteSimulationApplication-request-application)": "string",
-   "[applicationVersion](#robomaker-DeleteSimulationApplication-request-applicationVersion)": "string"
+   "application": "string",
+   "applicationVersion": "string"
 }
 ```
 
@@ -69,8 +69,8 @@ For more information about using this API in one of the language\-specific AWS S
 +  [AWS SDK for \.NET](https://docs.aws.amazon.com/goto/DotNetSDKV3/robomaker-2018-06-29/DeleteSimulationApplication) 
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/DeleteSimulationApplication) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/DeleteSimulationApplication) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/DeleteSimulationApplication) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/DeleteSimulationApplication) 
 +  [AWS SDK for JavaScript](https://docs.aws.amazon.com/goto/AWSJavaScriptSDK/robomaker-2018-06-29/DeleteSimulationApplication) 
 +  [AWS SDK for PHP V3](https://docs.aws.amazon.com/goto/SdkForPHPV3/robomaker-2018-06-29/DeleteSimulationApplication) 
 +  [AWS SDK for Python](https://docs.aws.amazon.com/goto/boto3/robomaker-2018-06-29/DeleteSimulationApplication) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/DeleteSimulationApplication) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/DeleteSimulationApplication) 

@@ -12,17 +12,19 @@ DELETE /tags/resourceArn?tagKeys=tagKeys HTTP/1.1
 
 ## URI Request Parameters<a name="API_UntagResource_RequestParameters"></a>
 
-The request requires the following URI parameters\.
+The request uses the following URI parameters\.
 
  ** [resourceArn](#API_UntagResource_RequestSyntax) **   <a name="robomaker-UntagResource-request-resourceArn"></a>
 The Amazon Resource Name \(ARN\) of the AWS RoboMaker resource you are removing tags\.  
 Length Constraints: Minimum length of 1\. Maximum length of 1224\.  
-Pattern: `arn:.*` 
+Pattern: `arn:.*`   
+Required: Yes
 
  ** [tagKeys](#API_UntagResource_RequestSyntax) **   <a name="robomaker-UntagResource-request-tagKeys"></a>
 A map that contains tag keys and tag values that will be unattached from the resource\.  
 Length Constraints: Minimum length of 1\. Maximum length of 128\.  
-Pattern: `[a-zA-Z0-9 _.\-\/+=:]*` 
+Pattern: `[a-zA-Z0-9 _.\-\/+=:]*`   
+Required: Yes
 
 ## Request Body<a name="API_UntagResource_RequestBody"></a>
 
@@ -65,8 +67,8 @@ For more information about using this API in one of the language\-specific AWS S
 +  [AWS SDK for \.NET](https://docs.aws.amazon.com/goto/DotNetSDKV3/robomaker-2018-06-29/UntagResource) 
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/UntagResource) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/UntagResource) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/UntagResource) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/UntagResource) 
 +  [AWS SDK for JavaScript](https://docs.aws.amazon.com/goto/AWSJavaScriptSDK/robomaker-2018-06-29/UntagResource) 
 +  [AWS SDK for PHP V3](https://docs.aws.amazon.com/goto/SdkForPHPV3/robomaker-2018-06-29/UntagResource) 
 +  [AWS SDK for Python](https://docs.aws.amazon.com/goto/boto3/robomaker-2018-06-29/UntagResource) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/UntagResource) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/UntagResource) 

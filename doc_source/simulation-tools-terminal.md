@@ -1,6 +1,6 @@
 # Terminal<a name="simulation-tools-terminal"></a>
 
-The Terminal provides access to a command\-line on the simulation job host\.
+The Terminal GUI tool provides a convinent way to explore your simulation with command line based ROS commands\. You can access a terminal for each of the applications running in your simulation\. The application's bundle will be sourced to setup your ROS workspace\. You can access the application terminal tools in the Robot or Simulation application section in the simulation job details page\. 
 
 To perform the tasks below, the Terminal must be open and connected to a running simulation job\. You can open the Terminal from the **Simulation jobs detail** page of a running simulation job\. 
 
@@ -16,13 +16,7 @@ Launching GUI applications in the terminal window is unsupported\.
 
 Use `rostopic` to display information about ROS topics\. For more information about `rostopic`, see [http://wiki\.ros\.org/rostopic](http://wiki.ros.org/rostopic)\. 
 
-1. In **terminal**, type in the following commands to set up the ROS environment:
-
-   ```
-   eval $AWS_ROBOMAKER_ROBOT_APPLICATION_SETUP
-   ```
-
-1. Type the following command to see a list of available topics:
+1. In **terminal**, type the following command to see a list of available topics:
 
    ```
    rostopic list
@@ -38,13 +32,7 @@ Use `rostopic` to display information about ROS topics\. For more information ab
 
 Use `rosnode` to display information about ROS nodes and services\. For more information about `rosnode`, see [http://wiki\.ros\.org/rosnode](http://wiki.ros.org/rosnode)\. 
 
-1. In **terminal**, type in the following commands to set up the ROS environment:
-
-   ```
-   eval $AWS_ROBOMAKER_ROBOT_APPLICATION_SETUP
-   ```
-
-1. Type the following command to see a list of available topics:
+1. In **terminal**, type the following command to see a list of available topics:
 
    ```
    rosnode list

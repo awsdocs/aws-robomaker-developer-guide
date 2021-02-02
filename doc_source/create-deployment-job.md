@@ -2,6 +2,8 @@
 
 Create a deployment job to install a unique version of a robot application on robots in a fleet\. You can define custom environment variables and run a script before and after your application launches on the robot to perform additional configuration\.
 
+You can set fleet and robot deployment timeouts\. The default fleet timeout is 30 days\. The default robot deployment timeout is 5 hours\. For example, if you have 100 robots in your fleet and you deploy to them sequentially with a robot timeout of 7 days, the deployment might take 700 days\. AWS RoboMaker will timeout the deployment at 30 days, the default fleet timeout\. 
+
 For more details about how AWS RoboMaker deploys a robot application, see [How Robot Applications are Deployed](deployment.md#deployment-details)\.
 
 **Note**  
@@ -60,11 +62,13 @@ Specify a failure threshold percentage larger than concurrent deployment percent
 
 1. Optionally, provide a **Download condition file in S3**\. The file is a script you can use to verify the robot is ready to download and install the deployment\. For example, you can check to see if the robot is in a charging station and not performing a task \(like flying or moving objects\)\.
 
-1. Optionally, you can **lock S3 file to the latest etag**\. The entity tag is a has of the Amazon S3 object and reflects changes to the contents of the file, not its metadata\. When selected, AWS RoboMaker will ensure that version is used during deployment\. 
+1. Optionally, you can **lock S3 file to the latest etag**\. The entity tag is a hash of the Amazon S3 object and reflects changes to the contents of the file, not its metadata\. When selected, AWS RoboMaker will ensure that version is used during deployment\. 
 
 1. Optionally, under **Tags**, specify one or more tags for the deployment\. Tags are words or phrases that act as metadata for identifying and organizing your AWS resources\. Each tag consists of a key and a value\. You can manage tags for your deployment on the **Deployment details** page\.
 
-   For more about tagging, see [Tagging Your AWS RoboMaker Rseources](https://docs.aws.amazon.com/robomaker/latest/dg/tagging.html)\. 
+   Your tags can be populated as environment variables on the robot when the robot application is deployed\. Tags must only contain alphanumeric or underscore characters\. The environment variable name will be formatted as `AWS_ROBOMAKER_ROBOT_TAG_KEY_TAGKEY`, where `TAGKEY` is your tag key\. The tag value will be the environment variable value\. 
+
+   For more about tagging, see [Tagging Your AWS RoboMaker Resources](tagging-robomaker.md)\. 
 
 1. Click **Create** to create the deployment job\. 
 

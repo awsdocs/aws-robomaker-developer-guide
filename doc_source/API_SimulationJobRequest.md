@@ -4,6 +4,11 @@ Information about a simulation job request\.
 
 ## Contents<a name="API_SimulationJobRequest_Contents"></a>
 
+ **compute**   <a name="robomaker-Type-SimulationJobRequest-compute"></a>
+Compute information for the simulation job  
+Type: [Compute](API_Compute.md) object  
+Required: No
+
  **dataSources**   <a name="robomaker-Type-SimulationJobRequest-dataSources"></a>
 Specify data sources to mount read\-only files from S3 into your simulation\. These files are available under `/opt/robomaker/datasources/data_source_name`\.   
 There is a limit of 100 files and a combined size of 25GB for all `DataSourceConfig` objects\. 
@@ -58,6 +63,7 @@ Required: No
  **tags**   <a name="robomaker-Type-SimulationJobRequest-tags"></a>
 A map that contains tag keys and tag values that are attached to the simulation job request\.  
 Type: String to string map  
+Map Entries: Minimum number of 0 items\. Maximum number of 50 items\.  
 Key Length Constraints: Minimum length of 1\. Maximum length of 128\.  
 Key Pattern: `[a-zA-Z0-9 _.\-\/+=:]*`   
 Value Length Constraints: Minimum length of 0\. Maximum length of 256\.  
@@ -65,7 +71,7 @@ Value Pattern: `[a-zA-Z0-9 _.\-\/+=:]*`
 Required: No
 
  **useDefaultApplications**   <a name="robomaker-Type-SimulationJobRequest-useDefaultApplications"></a>
-Boolean indicating whether to use default simulation tool applications\.  
+A Boolean indicating whether to use default applications in the simulation job\. Default applications include Gazebo, rqt, rviz and terminal access\.   
 Type: Boolean  
 Required: No
 
@@ -79,5 +85,5 @@ Required: No
 For more information about using this API in one of the language\-specific AWS SDKs, see the following:
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/SimulationJobRequest) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/SimulationJobRequest) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/SimulationJobRequest) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/SimulationJobRequest) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/SimulationJobRequest) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/SimulationJobRequest) 

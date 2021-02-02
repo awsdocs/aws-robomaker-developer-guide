@@ -9,17 +9,17 @@ POST /updateRobotApplication HTTP/1.1
 Content-type: application/json
 
 {
-   "[application](#robomaker-UpdateRobotApplication-request-application)": "string",
-   "[currentRevisionId](#robomaker-UpdateRobotApplication-request-currentRevisionId)": "string",
-   "[robotSoftwareSuite](#robomaker-UpdateRobotApplication-request-robotSoftwareSuite)": { 
-      "[name](API_RobotSoftwareSuite.md#robomaker-Type-RobotSoftwareSuite-name)": "string",
-      "[version](API_RobotSoftwareSuite.md#robomaker-Type-RobotSoftwareSuite-version)": "string"
+   "application": "string",
+   "currentRevisionId": "string",
+   "robotSoftwareSuite": { 
+      "name": "string",
+      "version": "string"
    },
-   "[sources](#robomaker-UpdateRobotApplication-request-sources)": [ 
+   "sources": [ 
       { 
-         "[architecture](API_SourceConfig.md#robomaker-Type-SourceConfig-architecture)": "string",
-         "[s3Bucket](API_SourceConfig.md#robomaker-Type-SourceConfig-s3Bucket)": "string",
-         "[s3Key](API_SourceConfig.md#robomaker-Type-SourceConfig-s3Key)": "string"
+         "architecture": "string",
+         "s3Bucket": "string",
+         "s3Key": "string"
       }
    ]
 }
@@ -64,23 +64,23 @@ HTTP/1.1 200
 Content-type: application/json
 
 {
-   "[arn](#robomaker-UpdateRobotApplication-response-arn)": "string",
-   "[lastUpdatedAt](#robomaker-UpdateRobotApplication-response-lastUpdatedAt)": number,
-   "[name](#robomaker-UpdateRobotApplication-response-name)": "string",
-   "[revisionId](#robomaker-UpdateRobotApplication-response-revisionId)": "string",
-   "[robotSoftwareSuite](#robomaker-UpdateRobotApplication-response-robotSoftwareSuite)": { 
-      "[name](API_RobotSoftwareSuite.md#robomaker-Type-RobotSoftwareSuite-name)": "string",
-      "[version](API_RobotSoftwareSuite.md#robomaker-Type-RobotSoftwareSuite-version)": "string"
+   "arn": "string",
+   "lastUpdatedAt": number,
+   "name": "string",
+   "revisionId": "string",
+   "robotSoftwareSuite": { 
+      "name": "string",
+      "version": "string"
    },
-   "[sources](#robomaker-UpdateRobotApplication-response-sources)": [ 
+   "sources": [ 
       { 
-         "[architecture](API_Source.md#robomaker-Type-Source-architecture)": "string",
-         "[etag](API_Source.md#robomaker-Type-Source-etag)": "string",
-         "[s3Bucket](API_Source.md#robomaker-Type-Source-s3Bucket)": "string",
-         "[s3Key](API_Source.md#robomaker-Type-Source-s3Key)": "string"
+         "architecture": "string",
+         "etag": "string",
+         "s3Bucket": "string",
+         "s3Key": "string"
       }
    ],
-   "[version](#robomaker-UpdateRobotApplication-response-version)": "string"
+   "version": "string"
 }
 ```
 
@@ -157,8 +157,8 @@ For more information about using this API in one of the language\-specific AWS S
 +  [AWS SDK for \.NET](https://docs.aws.amazon.com/goto/DotNetSDKV3/robomaker-2018-06-29/UpdateRobotApplication) 
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/UpdateRobotApplication) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/UpdateRobotApplication) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/UpdateRobotApplication) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/UpdateRobotApplication) 
 +  [AWS SDK for JavaScript](https://docs.aws.amazon.com/goto/AWSJavaScriptSDK/robomaker-2018-06-29/UpdateRobotApplication) 
 +  [AWS SDK for PHP V3](https://docs.aws.amazon.com/goto/SdkForPHPV3/robomaker-2018-06-29/UpdateRobotApplication) 
 +  [AWS SDK for Python](https://docs.aws.amazon.com/goto/boto3/robomaker-2018-06-29/UpdateRobotApplication) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/UpdateRobotApplication) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/UpdateRobotApplication) 

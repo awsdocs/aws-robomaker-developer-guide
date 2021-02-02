@@ -12,75 +12,101 @@ POST /createSimulationJob HTTP/1.1
 Content-type: application/json
 
 {
-   "[clientRequestToken](#robomaker-CreateSimulationJob-request-clientRequestToken)": "string",
-   "[dataSources](#robomaker-CreateSimulationJob-request-dataSources)": [ 
+   "clientRequestToken": "string",
+   "compute": { 
+      "simulationUnitLimit": number
+   },
+   "dataSources": [ 
       { 
-         "[name](API_DataSourceConfig.md#robomaker-Type-DataSourceConfig-name)": "string",
-         "[s3Bucket](API_DataSourceConfig.md#robomaker-Type-DataSourceConfig-s3Bucket)": "string",
-         "[s3Keys](API_DataSourceConfig.md#robomaker-Type-DataSourceConfig-s3Keys)": [ "string" ]
+         "name": "string",
+         "s3Bucket": "string",
+         "s3Keys": [ "string" ]
       }
    ],
-   "[failureBehavior](#robomaker-CreateSimulationJob-request-failureBehavior)": "string",
-   "[iamRole](#robomaker-CreateSimulationJob-request-iamRole)": "string",
-   "[loggingConfig](#robomaker-CreateSimulationJob-request-loggingConfig)": { 
-      "[recordAllRosTopics](API_LoggingConfig.md#robomaker-Type-LoggingConfig-recordAllRosTopics)": boolean
+   "failureBehavior": "string",
+   "iamRole": "string",
+   "loggingConfig": { 
+      "recordAllRosTopics": boolean
    },
-   "[maxJobDurationInSeconds](#robomaker-CreateSimulationJob-request-maxJobDurationInSeconds)": number,
-   "[outputLocation](#robomaker-CreateSimulationJob-request-outputLocation)": { 
-      "[s3Bucket](API_OutputLocation.md#robomaker-Type-OutputLocation-s3Bucket)": "string",
-      "[s3Prefix](API_OutputLocation.md#robomaker-Type-OutputLocation-s3Prefix)": "string"
+   "maxJobDurationInSeconds": number,
+   "outputLocation": { 
+      "s3Bucket": "string",
+      "s3Prefix": "string"
    },
-   "[robotApplications](#robomaker-CreateSimulationJob-request-robotApplications)": [ 
+   "robotApplications": [ 
       { 
-         "[application](API_RobotApplicationConfig.md#robomaker-Type-RobotApplicationConfig-application)": "string",
-         "[applicationVersion](API_RobotApplicationConfig.md#robomaker-Type-RobotApplicationConfig-applicationVersion)": "string",
-         "[launchConfig](API_RobotApplicationConfig.md#robomaker-Type-RobotApplicationConfig-launchConfig)": { 
-            "[environmentVariables](API_LaunchConfig.md#robomaker-Type-LaunchConfig-environmentVariables)": { 
+         "application": "string",
+         "applicationVersion": "string",
+         "launchConfig": { 
+            "environmentVariables": { 
                "string" : "string" 
             },
-            "[launchFile](API_LaunchConfig.md#robomaker-Type-LaunchConfig-launchFile)": "string",
-            "[packageName](API_LaunchConfig.md#robomaker-Type-LaunchConfig-packageName)": "string",
-            "[portForwardingConfig](API_LaunchConfig.md#robomaker-Type-LaunchConfig-portForwardingConfig)": { 
-               "[portMappings](API_PortForwardingConfig.md#robomaker-Type-PortForwardingConfig-portMappings)": [ 
+            "launchFile": "string",
+            "packageName": "string",
+            "portForwardingConfig": { 
+               "portMappings": [ 
                   { 
-                     "[applicationPort](API_PortMapping.md#robomaker-Type-PortMapping-applicationPort)": number,
-                     "[enableOnPublicIp](API_PortMapping.md#robomaker-Type-PortMapping-enableOnPublicIp)": boolean,
-                     "[jobPort](API_PortMapping.md#robomaker-Type-PortMapping-jobPort)": number
+                     "applicationPort": number,
+                     "enableOnPublicIp": boolean,
+                     "jobPort": number
                   }
                ]
+            },
+            "streamUI": boolean
+         },
+         "uploadConfigurations": [ 
+            { 
+               "name": "string",
+               "path": "string",
+               "uploadBehavior": "string"
             }
-         }
+         ],
+         "useDefaultUploadConfigurations": boolean
       }
    ],
-   "[simulationApplications](#robomaker-CreateSimulationJob-request-simulationApplications)": [ 
+   "simulationApplications": [ 
       { 
-         "[application](API_SimulationApplicationConfig.md#robomaker-Type-SimulationApplicationConfig-application)": "string",
-         "[applicationVersion](API_SimulationApplicationConfig.md#robomaker-Type-SimulationApplicationConfig-applicationVersion)": "string",
-         "[launchConfig](API_SimulationApplicationConfig.md#robomaker-Type-SimulationApplicationConfig-launchConfig)": { 
-            "[environmentVariables](API_LaunchConfig.md#robomaker-Type-LaunchConfig-environmentVariables)": { 
+         "application": "string",
+         "applicationVersion": "string",
+         "launchConfig": { 
+            "environmentVariables": { 
                "string" : "string" 
             },
-            "[launchFile](API_LaunchConfig.md#robomaker-Type-LaunchConfig-launchFile)": "string",
-            "[packageName](API_LaunchConfig.md#robomaker-Type-LaunchConfig-packageName)": "string",
-            "[portForwardingConfig](API_LaunchConfig.md#robomaker-Type-LaunchConfig-portForwardingConfig)": { 
-               "[portMappings](API_PortForwardingConfig.md#robomaker-Type-PortForwardingConfig-portMappings)": [ 
+            "launchFile": "string",
+            "packageName": "string",
+            "portForwardingConfig": { 
+               "portMappings": [ 
                   { 
-                     "[applicationPort](API_PortMapping.md#robomaker-Type-PortMapping-applicationPort)": number,
-                     "[enableOnPublicIp](API_PortMapping.md#robomaker-Type-PortMapping-enableOnPublicIp)": boolean,
-                     "[jobPort](API_PortMapping.md#robomaker-Type-PortMapping-jobPort)": number
+                     "applicationPort": number,
+                     "enableOnPublicIp": boolean,
+                     "jobPort": number
                   }
                ]
+            },
+            "streamUI": boolean
+         },
+         "uploadConfigurations": [ 
+            { 
+               "name": "string",
+               "path": "string",
+               "uploadBehavior": "string"
             }
-         }
+         ],
+         "useDefaultUploadConfigurations": boolean,
+         "worldConfigs": [ 
+            { 
+               "world": "string"
+            }
+         ]
       }
    ],
-   "[tags](#robomaker-CreateSimulationJob-request-tags)": { 
+   "tags": { 
       "string" : "string" 
    },
-   "[vpcConfig](#robomaker-CreateSimulationJob-request-vpcConfig)": { 
-      "[assignPublicIp](API_VPCConfig.md#robomaker-Type-VPCConfig-assignPublicIp)": boolean,
-      "[securityGroups](API_VPCConfig.md#robomaker-Type-VPCConfig-securityGroups)": [ "string" ],
-      "[subnets](API_VPCConfig.md#robomaker-Type-VPCConfig-subnets)": [ "string" ]
+   "vpcConfig": { 
+      "assignPublicIp": boolean,
+      "securityGroups": [ "string" ],
+      "subnets": [ "string" ]
    }
 }
 ```
@@ -98,6 +124,11 @@ Unique, case\-sensitive identifier that you provide to ensure the idempotency of
 Type: String  
 Length Constraints: Minimum length of 1\. Maximum length of 64\.  
 Pattern: `[a-zA-Z0-9_\-=]*`   
+Required: No
+
+ ** [compute](#API_CreateSimulationJob_RequestSyntax) **   <a name="robomaker-CreateSimulationJob-request-compute"></a>
+Compute information for the simulation job\.  
+Type: [Compute](API_Compute.md) object  
 Required: No
 
  ** [dataSources](#API_CreateSimulationJob_RequestSyntax) **   <a name="robomaker-CreateSimulationJob-request-dataSources"></a>
@@ -154,6 +185,7 @@ Required: No
  ** [tags](#API_CreateSimulationJob_RequestSyntax) **   <a name="robomaker-CreateSimulationJob-request-tags"></a>
 A map that contains tag keys and tag values that are attached to the simulation job\.  
 Type: String to string map  
+Map Entries: Minimum number of 0 items\. Maximum number of 50 items\.  
 Key Length Constraints: Minimum length of 1\. Maximum length of 128\.  
 Key Pattern: `[a-zA-Z0-9 _.\-\/+=:]*`   
 Value Length Constraints: Minimum length of 0\. Maximum length of 256\.  
@@ -172,87 +204,113 @@ HTTP/1.1 200
 Content-type: application/json
 
 {
-   "[arn](#robomaker-CreateSimulationJob-response-arn)": "string",
-   "[clientRequestToken](#robomaker-CreateSimulationJob-response-clientRequestToken)": "string",
-   "[dataSources](#robomaker-CreateSimulationJob-response-dataSources)": [ 
+   "arn": "string",
+   "clientRequestToken": "string",
+   "compute": { 
+      "simulationUnitLimit": number
+   },
+   "dataSources": [ 
       { 
-         "[name](API_DataSource.md#robomaker-Type-DataSource-name)": "string",
-         "[s3Bucket](API_DataSource.md#robomaker-Type-DataSource-s3Bucket)": "string",
-         "[s3Keys](API_DataSource.md#robomaker-Type-DataSource-s3Keys)": [ 
+         "name": "string",
+         "s3Bucket": "string",
+         "s3Keys": [ 
             { 
-               "[etag](API_S3KeyOutput.md#robomaker-Type-S3KeyOutput-etag)": "string",
-               "[s3Key](API_S3KeyOutput.md#robomaker-Type-S3KeyOutput-s3Key)": "string"
+               "etag": "string",
+               "s3Key": "string"
             }
          ]
       }
    ],
-   "[failureBehavior](#robomaker-CreateSimulationJob-response-failureBehavior)": "string",
-   "[failureCode](#robomaker-CreateSimulationJob-response-failureCode)": "string",
-   "[iamRole](#robomaker-CreateSimulationJob-response-iamRole)": "string",
-   "[lastStartedAt](#robomaker-CreateSimulationJob-response-lastStartedAt)": number,
-   "[lastUpdatedAt](#robomaker-CreateSimulationJob-response-lastUpdatedAt)": number,
-   "[loggingConfig](#robomaker-CreateSimulationJob-response-loggingConfig)": { 
-      "[recordAllRosTopics](API_LoggingConfig.md#robomaker-Type-LoggingConfig-recordAllRosTopics)": boolean
+   "failureBehavior": "string",
+   "failureCode": "string",
+   "iamRole": "string",
+   "lastStartedAt": number,
+   "lastUpdatedAt": number,
+   "loggingConfig": { 
+      "recordAllRosTopics": boolean
    },
-   "[maxJobDurationInSeconds](#robomaker-CreateSimulationJob-response-maxJobDurationInSeconds)": number,
-   "[outputLocation](#robomaker-CreateSimulationJob-response-outputLocation)": { 
-      "[s3Bucket](API_OutputLocation.md#robomaker-Type-OutputLocation-s3Bucket)": "string",
-      "[s3Prefix](API_OutputLocation.md#robomaker-Type-OutputLocation-s3Prefix)": "string"
+   "maxJobDurationInSeconds": number,
+   "outputLocation": { 
+      "s3Bucket": "string",
+      "s3Prefix": "string"
    },
-   "[robotApplications](#robomaker-CreateSimulationJob-response-robotApplications)": [ 
+   "robotApplications": [ 
       { 
-         "[application](API_RobotApplicationConfig.md#robomaker-Type-RobotApplicationConfig-application)": "string",
-         "[applicationVersion](API_RobotApplicationConfig.md#robomaker-Type-RobotApplicationConfig-applicationVersion)": "string",
-         "[launchConfig](API_RobotApplicationConfig.md#robomaker-Type-RobotApplicationConfig-launchConfig)": { 
-            "[environmentVariables](API_LaunchConfig.md#robomaker-Type-LaunchConfig-environmentVariables)": { 
+         "application": "string",
+         "applicationVersion": "string",
+         "launchConfig": { 
+            "environmentVariables": { 
                "string" : "string" 
             },
-            "[launchFile](API_LaunchConfig.md#robomaker-Type-LaunchConfig-launchFile)": "string",
-            "[packageName](API_LaunchConfig.md#robomaker-Type-LaunchConfig-packageName)": "string",
-            "[portForwardingConfig](API_LaunchConfig.md#robomaker-Type-LaunchConfig-portForwardingConfig)": { 
-               "[portMappings](API_PortForwardingConfig.md#robomaker-Type-PortForwardingConfig-portMappings)": [ 
+            "launchFile": "string",
+            "packageName": "string",
+            "portForwardingConfig": { 
+               "portMappings": [ 
                   { 
-                     "[applicationPort](API_PortMapping.md#robomaker-Type-PortMapping-applicationPort)": number,
-                     "[enableOnPublicIp](API_PortMapping.md#robomaker-Type-PortMapping-enableOnPublicIp)": boolean,
-                     "[jobPort](API_PortMapping.md#robomaker-Type-PortMapping-jobPort)": number
+                     "applicationPort": number,
+                     "enableOnPublicIp": boolean,
+                     "jobPort": number
                   }
                ]
+            },
+            "streamUI": boolean
+         },
+         "uploadConfigurations": [ 
+            { 
+               "name": "string",
+               "path": "string",
+               "uploadBehavior": "string"
             }
-         }
+         ],
+         "useDefaultUploadConfigurations": boolean
       }
    ],
-   "[simulationApplications](#robomaker-CreateSimulationJob-response-simulationApplications)": [ 
+   "simulationApplications": [ 
       { 
-         "[application](API_SimulationApplicationConfig.md#robomaker-Type-SimulationApplicationConfig-application)": "string",
-         "[applicationVersion](API_SimulationApplicationConfig.md#robomaker-Type-SimulationApplicationConfig-applicationVersion)": "string",
-         "[launchConfig](API_SimulationApplicationConfig.md#robomaker-Type-SimulationApplicationConfig-launchConfig)": { 
-            "[environmentVariables](API_LaunchConfig.md#robomaker-Type-LaunchConfig-environmentVariables)": { 
+         "application": "string",
+         "applicationVersion": "string",
+         "launchConfig": { 
+            "environmentVariables": { 
                "string" : "string" 
             },
-            "[launchFile](API_LaunchConfig.md#robomaker-Type-LaunchConfig-launchFile)": "string",
-            "[packageName](API_LaunchConfig.md#robomaker-Type-LaunchConfig-packageName)": "string",
-            "[portForwardingConfig](API_LaunchConfig.md#robomaker-Type-LaunchConfig-portForwardingConfig)": { 
-               "[portMappings](API_PortForwardingConfig.md#robomaker-Type-PortForwardingConfig-portMappings)": [ 
+            "launchFile": "string",
+            "packageName": "string",
+            "portForwardingConfig": { 
+               "portMappings": [ 
                   { 
-                     "[applicationPort](API_PortMapping.md#robomaker-Type-PortMapping-applicationPort)": number,
-                     "[enableOnPublicIp](API_PortMapping.md#robomaker-Type-PortMapping-enableOnPublicIp)": boolean,
-                     "[jobPort](API_PortMapping.md#robomaker-Type-PortMapping-jobPort)": number
+                     "applicationPort": number,
+                     "enableOnPublicIp": boolean,
+                     "jobPort": number
                   }
                ]
+            },
+            "streamUI": boolean
+         },
+         "uploadConfigurations": [ 
+            { 
+               "name": "string",
+               "path": "string",
+               "uploadBehavior": "string"
             }
-         }
+         ],
+         "useDefaultUploadConfigurations": boolean,
+         "worldConfigs": [ 
+            { 
+               "world": "string"
+            }
+         ]
       }
    ],
-   "[simulationTimeMillis](#robomaker-CreateSimulationJob-response-simulationTimeMillis)": number,
-   "[status](#robomaker-CreateSimulationJob-response-status)": "string",
-   "[tags](#robomaker-CreateSimulationJob-response-tags)": { 
+   "simulationTimeMillis": number,
+   "status": "string",
+   "tags": { 
       "string" : "string" 
    },
-   "[vpcConfig](#robomaker-CreateSimulationJob-response-vpcConfig)": { 
-      "[assignPublicIp](API_VPCConfigResponse.md#robomaker-Type-VPCConfigResponse-assignPublicIp)": boolean,
-      "[securityGroups](API_VPCConfigResponse.md#robomaker-Type-VPCConfigResponse-securityGroups)": [ "string" ],
-      "[subnets](API_VPCConfigResponse.md#robomaker-Type-VPCConfigResponse-subnets)": [ "string" ],
-      "[vpcId](API_VPCConfigResponse.md#robomaker-Type-VPCConfigResponse-vpcId)": "string"
+   "vpcConfig": { 
+      "assignPublicIp": boolean,
+      "securityGroups": [ "string" ],
+      "subnets": [ "string" ],
+      "vpcId": "string"
    }
 }
 ```
@@ -274,6 +332,10 @@ Unique, case\-sensitive identifier that you provide to ensure the idempotency of
 Type: String  
 Length Constraints: Minimum length of 1\. Maximum length of 64\.  
 Pattern: `[a-zA-Z0-9_\-=]*` 
+
+ ** [compute](#API_CreateSimulationJob_ResponseSyntax) **   <a name="robomaker-CreateSimulationJob-response-compute"></a>
+Compute information for the simulation job\.  
+Type: [ComputeResponse](API_ComputeResponse.md) object
 
  ** [dataSources](#API_CreateSimulationJob_ResponseSyntax) **   <a name="robomaker-CreateSimulationJob-response-dataSources"></a>
 The data sources for the simulation job\.  
@@ -315,7 +377,7 @@ Etag for RobotApplication does not match value during version creation\.
 SimulationApplicationVersionMismatchedEtag  
 Etag for SimulationApplication does not match value during version creation\.
 Type: String  
-Valid Values:` InternalServiceError | RobotApplicationCrash | SimulationApplicationCrash | BadPermissionsRobotApplication | BadPermissionsSimulationApplication | BadPermissionsS3Object | BadPermissionsS3Output | BadPermissionsCloudwatchLogs | SubnetIpLimitExceeded | ENILimitExceeded | BadPermissionsUserCredentials | InvalidBundleRobotApplication | InvalidBundleSimulationApplication | InvalidS3Resource | LimitExceeded | MismatchedEtag | RobotApplicationVersionMismatchedEtag | SimulationApplicationVersionMismatchedEtag | ResourceNotFound | RequestThrottled | BatchTimedOut | BatchCanceled | InvalidInput | WrongRegionS3Bucket | WrongRegionS3Output | WrongRegionRobotApplication | WrongRegionSimulationApplication` 
+Valid Values:` InternalServiceError | RobotApplicationCrash | SimulationApplicationCrash | BadPermissionsRobotApplication | BadPermissionsSimulationApplication | BadPermissionsS3Object | BadPermissionsS3Output | BadPermissionsCloudwatchLogs | SubnetIpLimitExceeded | ENILimitExceeded | BadPermissionsUserCredentials | InvalidBundleRobotApplication | InvalidBundleSimulationApplication | InvalidS3Resource | LimitExceeded | MismatchedEtag | RobotApplicationVersionMismatchedEtag | SimulationApplicationVersionMismatchedEtag | ResourceNotFound | RequestThrottled | BatchTimedOut | BatchCanceled | InvalidInput | WrongRegionS3Bucket | WrongRegionS3Output | WrongRegionRobotApplication | WrongRegionSimulationApplication | UploadContentMismatchError` 
 
  ** [iamRole](#API_CreateSimulationJob_ResponseSyntax) **   <a name="robomaker-CreateSimulationJob-response-iamRole"></a>
 The IAM role that allows the simulation job to call the AWS APIs that are specified in its associated policies on your behalf\.  
@@ -365,6 +427,7 @@ Valid Values:` Pending | Preparing | Running | Restarting | Completed | Failed |
  ** [tags](#API_CreateSimulationJob_ResponseSyntax) **   <a name="robomaker-CreateSimulationJob-response-tags"></a>
 The list of all tags added to the simulation job\.  
 Type: String to string map  
+Map Entries: Minimum number of 0 items\. Maximum number of 50 items\.  
 Key Length Constraints: Minimum length of 1\. Maximum length of 128\.  
 Key Pattern: `[a-zA-Z0-9 _.\-\/+=:]*`   
 Value Length Constraints: Minimum length of 0\. Maximum length of 256\.  
@@ -413,8 +476,8 @@ For more information about using this API in one of the language\-specific AWS S
 +  [AWS SDK for \.NET](https://docs.aws.amazon.com/goto/DotNetSDKV3/robomaker-2018-06-29/CreateSimulationJob) 
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/CreateSimulationJob) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/CreateSimulationJob) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/CreateSimulationJob) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/CreateSimulationJob) 
 +  [AWS SDK for JavaScript](https://docs.aws.amazon.com/goto/AWSJavaScriptSDK/robomaker-2018-06-29/CreateSimulationJob) 
 +  [AWS SDK for PHP V3](https://docs.aws.amazon.com/goto/SdkForPHPV3/robomaker-2018-06-29/CreateSimulationJob) 
 +  [AWS SDK for Python](https://docs.aws.amazon.com/goto/boto3/robomaker-2018-06-29/CreateSimulationJob) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/CreateSimulationJob) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/CreateSimulationJob) 

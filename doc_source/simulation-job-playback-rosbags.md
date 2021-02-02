@@ -6,6 +6,8 @@ ROS bags are recorded using `rosbag record`\. ROS bags can be created from ROS a
 
 ROS bags specified in data sources are copied to the `/opt/robomaker/datasources/` directory in the simulation environment\.
 
+By default, AWS RoboMaker does not record ROS messages\. No ROS bags will be generated\.
+
 **Topics**
 + [Example Launch File Configurations](#simulation-job-playback-rosbags-example)
 + [Avoiding a Failed Simulation Job when Play Back Ends](#simulation-job-playback-rosbags-failed)

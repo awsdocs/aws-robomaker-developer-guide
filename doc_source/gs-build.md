@@ -38,7 +38,7 @@ In this section, you use the AWS Cloud9 development environment to modify the ro
 
 1. On the left, expand **Development**, choose **Development environments**, select **HelloWorld**, and then choose **Open environment**\. It might take a few minutes to prepare the development environment\. 
 
-1. In the **HelloWorld** AWS Cloud9 development environment, choose **AWS RoboMaker Resources**, then choose **Download samples**, and then select **1\. Hello World**\.
+1. In the **HelloWorld** AWS Cloud9 development environment, choose **Resources**, then choose **Download samples**, and then select **1\. Hello World**\.
 
 1. On the left, in the **Environment** tab, expand **HelloWorld**, **HelloWorld**, **robot\_ws**\. **src**, **hello\_world\_robot**, and then **nodes**\. Select the file **rotate** to load into the editor\.
 

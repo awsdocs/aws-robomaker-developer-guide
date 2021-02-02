@@ -14,6 +14,7 @@ A list of one or more security groups IDs in your VPC\.
 Type: Array of strings  
 Array Members: Minimum number of 1 item\. Maximum number of 5 items\.  
 Length Constraints: Minimum length of 1\. Maximum length of 255\.  
+Pattern: `.+`   
 Required: No
 
  **subnets**   <a name="robomaker-Type-VPCConfig-subnets"></a>
@@ -21,6 +22,7 @@ A list of one or more subnet IDs in your VPC\.
 Type: Array of strings  
 Array Members: Minimum number of 1 item\. Maximum number of 16 items\.  
 Length Constraints: Minimum length of 1\. Maximum length of 255\.  
+Pattern: `.+`   
 Required: Yes
 
 ## See Also<a name="API_VPCConfig_SeeAlso"></a>
@@ -28,5 +30,5 @@ Required: Yes
 For more information about using this API in one of the language\-specific AWS SDKs, see the following:
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/VPCConfig) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/VPCConfig) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/VPCConfig) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/VPCConfig) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/VPCConfig) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/VPCConfig) 

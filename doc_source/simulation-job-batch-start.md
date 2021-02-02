@@ -28,7 +28,7 @@ Simulation job batches are started from the AWS SDK or AWS CLI\. A simulation jo
                        }
                    }
                ],
-               “simulationApplications": [
+               "simulationApplications": [
                    {
                        "application": "arn:aws:robomaker:us-east-1:111111111111:simulation-applicationMySimulationApplicationArn",
                        "launchConfig": {
@@ -42,7 +42,7 @@ Simulation job batches are started from the AWS SDK or AWS CLI\. A simulation jo
                }
            },
            {
-               "maxJobDurationInSeconds": 200,
+               "maxJobDurationInSeconds": 300,
                "iamRole": "arn:aws:iam::111111111111:role/MyRole",
                "failureBehavior": "Fail",
                “simulationApplications": [
@@ -65,7 +65,7 @@ Simulation job batches are started from the AWS SDK or AWS CLI\. A simulation jo
 1. Open a command prompt, then run the following AWS CLI command:
 
    ```
-   $ aws robomaker start-simulation-job-batch start-simulation-job-batch --cli-input-json  file://startsimjobbatch.json
+   $ aws robomaker start-simulation-job-batch --cli-input-json  file://startsimjobbatch.json
    ```
 
    To view the simulation job batch, see [Viewing a Simulation Job Batch](simulation-job-batch-describe.md)\.

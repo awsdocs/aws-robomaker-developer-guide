@@ -10,4 +10,6 @@ You can create a new simulation job from an existing simulation job by *cloning*
 
 1. In the **Simulation job detail** page, under **Actions**, choose **Clone**\.
 
-1. In the **Review and create simulation job**, select **Edit** to make changes and then select **Create**\.
+1. In the **Review and create simulation job**, select **Edit** to make changes\. 
+
+1. Select **Create** to create the simulation job\.

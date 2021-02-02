@@ -14,9 +14,9 @@ For more information about beta terms and conditions, see [AWS Service Terms](ht
 
 This section describes the known differences between ROS and ROS2 when using AWS RoboMaker\. 
 
-### Cross\-Compiling Applications with Colcon<a name="robomaker-ros2-beta-cross-compile"></a>
+### Cross\-Compiling Applications<a name="robomaker-ros2-beta-cross-compile"></a>
 
-You can now cross\-compile your robot applications using the `cc-build` plug\-in for `colcon`\. For more informaton about installing it in your development environment, see [ros\-tooling/cross\-compile](https://github.com/ros-tooling/cross_compile)\. 
+You can now cross\-compile your robot applications using the `ros-cross-compile` tools\. For more informaton about installing it in your development environment, see [ros\-tooling/cross\-compile](https://github.com/ros-tooling/cross_compile)\. 
 
 ### Capturing log data with rosout<a name="robomaker-ros2-beta-logging"></a>
 

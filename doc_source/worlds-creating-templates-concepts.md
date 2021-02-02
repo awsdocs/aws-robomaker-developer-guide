@@ -1,0 +1,13 @@
+# Simulation WorldForge Concepts<a name="worlds-creating-templates-concepts"></a>
+
+Simulation WorldForge uses a collection of parameters \(a *simulation world template*\) to determine how to generate new worlds\. One simulation world template can be used to generate hundreds of worlds\. Each *world******* contains a building\. The building has a single floor\. The floor has a *floorplan template* that describes the rooms sizes and shapes\. It also suggests how the rooms might be connected\. Floors also have an *interior template* that specifies how structural elements like walls and floors in the floor plan are finished\. The interior template also has parameters describing how to populate each room with furnishing like tables and sofas and accessories like clothes and kitchenware\. 
+
+You can create a simulation world template from a sample template, clone an existing template, or start from scratch using the console at [https://console\.aws\.amazon\.com/robomaker/](https://console.aws.amazon.com/robomaker/)\. For example, if you want to generate worlds containing one bedroom, you can start with the one bedroom apartment sample template\. It is a one bedroom, one bathroom open floor plan with a kitchen and a living room\. It uses typical materials and furnishings and accessories appropriate for each room type\. After it is saved, you can start a *world generator job* to generate worlds\. You can generate up to 50 worlds in a world generation job\. 
+
+You can also create a simulation world template using the SDK or the AWS Command Line Interface\. For example, to create a template from the AWS CLI, first create a *world template JSON document* with the template body\. It specifies the parameters for the building, floor plans, interiors, and other details\. After you save it, you can create simulation world template by calling `create-world-template` and specifying the JSON file:
+
+```
+aws robomaker create-world-template --name "my-template" --templateBody file://my_template_body.json
+```
+
+After you have configured and saved a simulation world template, you can create a world generation job and generate worlds\. Hundreds of worlds can be generated from a single simulation world template\. You can generate up to 100 worlds in a single world generation job\. Worlds can be used with a simulation in AWS RoboMaker\. You can also export worlds to modify and use in your own ROS environment\. 

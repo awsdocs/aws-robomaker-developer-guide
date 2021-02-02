@@ -9,14 +9,14 @@ POST /listDeploymentJobs HTTP/1.1
 Content-type: application/json
 
 {
-   "[filters](#robomaker-ListDeploymentJobs-request-filters)": [ 
+   "filters": [ 
       { 
-         "[name](API_Filter.md#robomaker-Type-Filter-name)": "string",
-         "[values](API_Filter.md#robomaker-Type-Filter-values)": [ "string" ]
+         "name": "string",
+         "values": [ "string" ]
       }
    ],
-   "[maxResults](#robomaker-ListDeploymentJobs-request-maxResults)": number,
-   "[nextToken](#robomaker-ListDeploymentJobs-request-nextToken)": "string"
+   "maxResults": number,
+   "nextToken": "string"
 }
 ```
 
@@ -41,7 +41,7 @@ Type: Integer
 Required: No
 
  ** [nextToken](#API_ListDeploymentJobs_RequestSyntax) **   <a name="robomaker-ListDeploymentJobs-request-nextToken"></a>
-The `nextToken` value returned from a previous paginated `ListDeploymentJobs` request where `maxResults` was used and the results exceeded the value of that parameter\. Pagination continues from the end of the previous results that returned the `nextToken` value\.   
+If the previous paginated request did not return all of the remaining results, the response object's `nextToken` parameter value is set to a token\. To retrieve the next set of results, call `ListDeploymentJobs` again and assign that token to the request object's `nextToken` parameter\. If there are no remaining results, the previous response object's NextToken parameter is set to null\.   
 Type: String  
 Length Constraints: Minimum length of 1\. Maximum length of 2048\.  
 Pattern: `[a-zA-Z0-9_.\-\/+=]*`   
@@ -54,42 +54,42 @@ HTTP/1.1 200
 Content-type: application/json
 
 {
-   "[deploymentJobs](#robomaker-ListDeploymentJobs-response-deploymentJobs)": [ 
+   "deploymentJobs": [ 
       { 
-         "[arn](API_DeploymentJob.md#robomaker-Type-DeploymentJob-arn)": "string",
-         "[createdAt](API_DeploymentJob.md#robomaker-Type-DeploymentJob-createdAt)": number,
-         "[deploymentApplicationConfigs](API_DeploymentJob.md#robomaker-Type-DeploymentJob-deploymentApplicationConfigs)": [ 
+         "arn": "string",
+         "createdAt": number,
+         "deploymentApplicationConfigs": [ 
             { 
-               "[application](API_DeploymentApplicationConfig.md#robomaker-Type-DeploymentApplicationConfig-application)": "string",
-               "[applicationVersion](API_DeploymentApplicationConfig.md#robomaker-Type-DeploymentApplicationConfig-applicationVersion)": "string",
-               "[launchConfig](API_DeploymentApplicationConfig.md#robomaker-Type-DeploymentApplicationConfig-launchConfig)": { 
-                  "[environmentVariables](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-environmentVariables)": { 
+               "application": "string",
+               "applicationVersion": "string",
+               "launchConfig": { 
+                  "environmentVariables": { 
                      "string" : "string" 
                   },
-                  "[launchFile](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-launchFile)": "string",
-                  "[packageName](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-packageName)": "string",
-                  "[postLaunchFile](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-postLaunchFile)": "string",
-                  "[preLaunchFile](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-preLaunchFile)": "string"
+                  "launchFile": "string",
+                  "packageName": "string",
+                  "postLaunchFile": "string",
+                  "preLaunchFile": "string"
                }
             }
          ],
-         "[deploymentConfig](API_DeploymentJob.md#robomaker-Type-DeploymentJob-deploymentConfig)": { 
-            "[concurrentDeploymentPercentage](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-concurrentDeploymentPercentage)": number,
-            "[downloadConditionFile](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-downloadConditionFile)": { 
-               "[bucket](API_S3Object.md#robomaker-Type-S3Object-bucket)": "string",
-               "[etag](API_S3Object.md#robomaker-Type-S3Object-etag)": "string",
-               "[key](API_S3Object.md#robomaker-Type-S3Object-key)": "string"
+         "deploymentConfig": { 
+            "concurrentDeploymentPercentage": number,
+            "downloadConditionFile": { 
+               "bucket": "string",
+               "etag": "string",
+               "key": "string"
             },
-            "[failureThresholdPercentage](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-failureThresholdPercentage)": number,
-            "[robotDeploymentTimeoutInSeconds](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-robotDeploymentTimeoutInSeconds)": number
+            "failureThresholdPercentage": number,
+            "robotDeploymentTimeoutInSeconds": number
          },
-         "[failureCode](API_DeploymentJob.md#robomaker-Type-DeploymentJob-failureCode)": "string",
-         "[failureReason](API_DeploymentJob.md#robomaker-Type-DeploymentJob-failureReason)": "string",
-         "[fleet](API_DeploymentJob.md#robomaker-Type-DeploymentJob-fleet)": "string",
-         "[status](API_DeploymentJob.md#robomaker-Type-DeploymentJob-status)": "string"
+         "failureCode": "string",
+         "failureReason": "string",
+         "fleet": "string",
+         "status": "string"
       }
    ],
-   "[nextToken](#robomaker-ListDeploymentJobs-response-nextToken)": "string"
+   "nextToken": "string"
 }
 ```
 
@@ -105,7 +105,7 @@ Type: Array of [DeploymentJob](API_DeploymentJob.md) objects
 Array Members: Minimum number of 0 items\. Maximum number of 200 items\.
 
  ** [nextToken](#API_ListDeploymentJobs_ResponseSyntax) **   <a name="robomaker-ListDeploymentJobs-response-nextToken"></a>
-The `nextToken` value to include in a future `ListDeploymentJobs` request\. When the results of a `ListDeploymentJobs` request exceed `maxResults`, this value can be used to retrieve the next page of results\. This value is `null` when there are no more results to return\.   
+If the previous paginated request did not return all of the remaining results, the response object's `nextToken` parameter value is set to a token\. To retrieve the next set of results, call `ListDeploymentJobs` again and assign that token to the request object's `nextToken` parameter\. If there are no remaining results, the previous response object's NextToken parameter is set to null\.   
 Type: String  
 Length Constraints: Minimum length of 1\. Maximum length of 2048\.  
 Pattern: `[a-zA-Z0-9_.\-\/+=]*` 
@@ -137,8 +137,8 @@ For more information about using this API in one of the language\-specific AWS S
 +  [AWS SDK for \.NET](https://docs.aws.amazon.com/goto/DotNetSDKV3/robomaker-2018-06-29/ListDeploymentJobs) 
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/ListDeploymentJobs) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/ListDeploymentJobs) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/ListDeploymentJobs) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/ListDeploymentJobs) 
 +  [AWS SDK for JavaScript](https://docs.aws.amazon.com/goto/AWSJavaScriptSDK/robomaker-2018-06-29/ListDeploymentJobs) 
 +  [AWS SDK for PHP V3](https://docs.aws.amazon.com/goto/SdkForPHPV3/robomaker-2018-06-29/ListDeploymentJobs) 
 +  [AWS SDK for Python](https://docs.aws.amazon.com/goto/boto3/robomaker-2018-06-29/ListDeploymentJobs) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/ListDeploymentJobs) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/ListDeploymentJobs) 

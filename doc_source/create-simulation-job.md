@@ -26,7 +26,7 @@ If you are using an existing Amazon S3 bucket or creating a new bucket, it must 
 
 1. Sign in to the AWS RoboMaker console at [https://console\.aws\.amazon\.com/robomaker/](https://console.aws.amazon.com/robomaker/)\.
 
-1. In the left navigation pane, choose **Simulations**, and then choose **Simulation jobs**\.
+1. In the left navigation pane, choose **Simulation run**, and then choose **Simulation jobs**\.
 
 1. Choose **Create simulation job**\.
 
@@ -40,9 +40,13 @@ To learn more about how you are charged for AWS RoboMaker see [AWS RoboMaker Pri
 
 1. For **IAM Role**, select a role or select **Create new role** to create one\. AWS RoboMaker will use this role to access resources on your behalf\. It is also used by your application to access AWS resources like Amazon Rekognition or Amazon Lex\.
 
+1. *Optional:* In **Compute**, select a simulation unit limit\. Your simulation is allocated CPU and memory proportional to the supplied simulation unit limit\. A simulation unit is 1 vcpu and 2GB of memory\. The default is 15\. 
+
 1. *Optional:* In **Output destination**, type in a Amazon S3 folder name where simulation job output will be stored\. Optionally, select **Create new S3 folder** to create a new Amazon S3 folder\.
 
-1. *Optional:* In **Networking**, if your robot application or simulation application accesses resources on an Amazon VPC, select the **VPC**, subnets and security groups\. If you want to access the simulation job from outside of the VPC, select **Assign public IP**\. 
+1. *Optional:* In **Networking**, if your robot application or simulation application accesses resources on an Amazon VPC, select the **VPC**, subnets and security groups\. Select all available subnets to ensure all of your resource limits are available\. For more information, see [VPCs and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html)\.
+
+   If you want to access the simulation job from outside of the VPC, select **Assign public IP**\. 
 
 1. *Optional:* To connect to your simulation application or robot application remotely, select **Enable connectivity to simulation**, then specify port mappings for the robot application and simulation application\. 
 **Warning**  
@@ -62,17 +66,29 @@ You are responsible for configuring a secure remote connection to the simulation
 
    Optionally, if you plan on deploying the robot application to robots in a fleet, you can provide **ARMHF** and **ARM64** robot application source files\. You can also update the robot application to include additional source files\. For more information, see [Updating a Robot Application](update-robot-application.md)\.
 
+   Using `$LATEST` doesn’t protect you from changes in Amazon S3\. When AWS RoboMaker access the file, it will set to read only\. For more informatiom about versioning in AWS RoboMaker, see [Application Versioning](application-versioning.md)\. 
+
 1. In **Robot application configuration**, provide the roslaunch **Launch package name** for your robot application\. 
 
 1. Specify the roslaunch **Launch file**\. A launch file contains configuration information about which nodes to start up as well as other initialization parameters for roslaunch\.
 
    To learn more about roslaunch, see [roslaunch](http://wiki.ros.org/roslaunch)\.
 
+1. *Optional:* If your application includes a graphical user interface, select **Run with streaming session**\. AWS RoboMaker will configure a connection so you can interact with your application as it is running in the simulation\. You can connect by selecting **Robot Application** under **Simulation tools** on the simulation job detail page\.
+
 1. *Optional:* If your robot application uses environment variables, specify the **Name** and **Value** pairs\. Environment variable names must start with A\-Z or underscore and consist of A\-Z, 0\-9 and underscore\. Names beginning with “AWS” are reserved\.
 
    Select **Add environment variable** to add additional variables\. 
 
    You can read environment variables in a launch file using roslaunch [substituion args](http://wiki.ros.org/roslaunch/XML#substitution_args)\.
+
+1. *Optional:* Configure traffic forwarding from the simulation job port to the application port\. Simulation job networking must be configured in order to specify port mapping for your robot and simulation applications\. 
+
+1. *Optional:* Specify one or more **Robot application upload configurations**\. A simulation job output destination must be configured in order to specify upload configurations\. Each configuration specifies an upload behavior, a Unix glob file matching rule, and a location to place matching files\. 
+
+   Default upload configurations maintain backwards compatibility with past simulation job output configurations\. The default configurations will be added to additional upload configurations you create\. 
+
+   For more information about custom uploads, see [Configuring Custom Uploads](simulation-job-custom-upload-configuration.md)\. 
 
 1. Choose **Next**\. 
 
@@ -84,11 +100,29 @@ You are responsible for configuring a secure remote connection to the simulation
 
 1. Under **Sources**, specify the Amazon S3 location for the **X86\_64** simulation application source\. AWS RoboMaker simulation jobs require an **X86\_64** source to run the simulation\. 
 
+   Using `$LATEST` doesn’t protect you from changes in Amazon S3\. When AWS RoboMaker access the file, it will set to read only\. For more informatiom about versioning in AWS RoboMaker, see [Application Versioning](application-versioning.md)\. 
+
 1. In **Simulation application configuration**, provide the roslaunch **Launch package name** and the roslaunch **Launch file** for your simulation application\. 
+
+1. *Optional:* If your application includes a graphical user interface, select **Run with streaming session**\. AWS RoboMaker will configure a connection so you can interact with your application as it is running in the simulation\. You can connect by selecting **Simulation Application** under **Simulation tools** on the simulation job detail page\.
 
 1. *Optional:* If your simulation application uses environment variables, specify the **Name** and **Value** pairs\. Select **Add environment variable** to add additional variables\.
 
+1. *Optional:* If you want to import a world generated with Simulation WorldForge, select **Browse worlds** and then select the world you want to import\. 
+
+   You must configure your simulation application launch file to include the world\. For more information about using imported worlds, see [Using an imported world in a simulation job](application-worlds-using.md#application-worlds-using-imported)\.
+
+1. *Optional:* Configure traffic forwarding from the simulation job port to the application port\. Simulation job networking must be configured in order to specify port mapping for your robot and simulation applications\. 
+
+1. *Optional:* Specify one or more **Simulation application upload configurations**\. A simulation job output destination must be configured in order to specify upload configurations\. Each configuration specifies an upload behavior, a Unix glob file matching rule, and a location to place matching files\. 
+
+   Default upload configurations maintain backwards compatibility with past simulation job output configurations\. The default configurations will be added to additional upload configurations you create\. 
+
+   For more information about custom uploads, see [Configuring Custom Uploads](simulation-job-custom-upload-configuration.md)\. 
+
 1. Choose **Next**\. 
+
+1. *Optional:* Configure traffic forwarding from the simulation job port to the application port\. Simulation job networking must be configured in order to specify port mapping for your robot and simulation applications\. 
 
 1. Select **Create** to create the simulation job\. 
 
@@ -116,7 +150,7 @@ If you are using an existing Amazon S3 bucket or creating a new bucket, it must 
 
 1. Sign in to the AWS RoboMaker console at [https://console\.aws\.amazon\.com/robomaker/](https://console.aws.amazon.com/robomaker/)\.
 
-1. In the left navigation pane, choose **Simulations**, and then choose **Simulation jobs**\.
+1. In the left navigation pane, choose **Simulation run**, and then choose **Simulation jobs**\.
 
 1. Choose **Create simulation job**\.
 
@@ -129,6 +163,8 @@ To learn more about how you are charged for AWS RoboMaker see [AWS RoboMaker Pri
    If you specify an optional S3 folder below, it will contain simulation data\. It is available independent of the selected failure behavior\. 
 
 1. For **IAM Role**, select a role or select **Create new role** to create one\. AWS RoboMaker will use this role to access resources on your behalf\. It is also used by your application to access AWS resources like Amazon Rekognition or Amazon Lex\.
+
+1. *Optional:* In **Compute**, select a simulation unit limit\. Your simulation is allocated CPU and memory proportional to the supplied simulation unit limit\. A simulation unit is 1 vcpu and 2GB of memory\. The default is 15\. 
 
 1. *Optional:* In **Output destination**, type in a Amazon S3 folder name where simulation job output will be stored\. Optionally, select **Create new S3 folder** to create a new Amazon S3 folder\.
 
@@ -148,17 +184,29 @@ To learn more about how you are charged for AWS RoboMaker see [AWS RoboMaker Pri
 
    Optionally, if you plan on deploying the robot application to robots in a fleet, you can provide **ARMHF** and **ARM64** robot application source files\. You can also update the robot application to include additional source files\. For more information, see [Updating a Robot Application](update-robot-application.md)\.
 
+   Using `$LATEST` doesn’t protect you from changes in Amazon S3\. When AWS RoboMaker access the file, it will set to read only\. For more informatiom about versioning in AWS RoboMaker, see [Application Versioning](application-versioning.md)\. 
+
 1. In **Robot application configuration**, provide the roslaunch **Launch package name** for your robot application\. 
 
 1. Specify the roslaunch **Launch file**\. A launch file contains configuration information about which nodes to start up as well as other initialization parameters for roslaunch\.
 
    To learn more about roslaunch, see [roslaunch](http://wiki.ros.org/roslaunch)\.
 
+1. *Optional:* If your application includes a graphical user interface, select **Run with streaming session**\. AWS RoboMaker will configure a connection so you can interact with your application as it is running in the simulation\. You can connect by selecting **Robot Application** under **Simulation tools** on the simulation job detail page\.
+
 1. *Optional:* If your robot application uses environment variables, specify the **Name** and **Value** pairs\. Environment variable names must start with A\-Z or underscore and consist of A\-Z, 0\-9 and underscore\. Names beginning with “AWS” are reserved\.
 
    Select **Add environment variable** to add additional variables\. 
 
    You can read environment variables in a launch file using roslaunch [substituion args](http://wiki.ros.org/roslaunch/XML#substitution_args)\.
+
+1. *Optional:* Configure traffic forwarding from the simulation job port to the application port\. Simulation job networking must be configured in order to specify port mapping for your robot and simulation applications\. 
+
+1. *Optional:* Specify one or more **Robot application upload configurations**\. A simulation job output destination must be configured in order to specify upload configurations\. Each configuration specifies an upload behavior, a Unix glob file matching rule, and a location to place matching files\. 
+
+   Default upload configurations maintain backwards compatibility with past simulation job output configurations\. The default configurations will be added to additional upload configurations you create\. 
+
+   For more information about custom uploads, see [Configuring Custom Uploads](simulation-job-custom-upload-configuration.md)\. 
 
 1. Choose **Next**\. 
 
@@ -170,13 +218,29 @@ To learn more about how you are charged for AWS RoboMaker see [AWS RoboMaker Pri
 
 1. Select the **Browse S3**, and then specify the path to your simulation application\. 
 
+   Using `$LATEST` doesn’t protect you from changes in Amazon S3\. When AWS RoboMaker access the file, it will set to read only\. For more informatiom about versioning in AWS RoboMaker, see [Application Versioning](application-versioning.md)\. 
+
 1. In **Simulation application configuration**, provide the roslaunch **Launch package name** and the roslaunch **Launch file** for your simulation application\. 
+
+1. *Optional:* If your application includes a graphical user interface, select **Run with streaming session**\. AWS RoboMaker will configure a connection so you can interact with your application as it is running in the simulation\. You can connect by selecting **Simulation Application** under **Simulation tools** on the simulation job detail page\.
 
 1. *Optional:* If your simulation application uses environment variables, specify the **Name** and **Value** pairs\. Select **Add environment variable** to add additional variables\.
 
 1. In **Data source configuration**, provide a **ROS bag group name**, then choose **Browse S3** to select **ROS bag files**\. The files should contain ROS messages in the same format used by `rosbag record`\. Choose **Add group** to add additional groups of data files\. 
 **Note**  
 You can select up 100 files with a combined size less than 25 GB across all groups\. Performance may be impacted as the combined size of the data files increase\.
+
+1. *Optional:* If you want to import a world generated with Simulation WorldForge, select **Browse worlds** and then select the world you want to import\. 
+
+   You must configure your simulation application launch file to include the world\. For more information about using imported worlds, see [Using an imported world in a simulation job](application-worlds-using.md#application-worlds-using-imported)\.
+
+1. *Optional:* Configure traffic forwarding from the simulation job port to the application port\. Simulation job networking must be configured in order to specify port mapping for your robot and simulation applications\. 
+
+1. *Optional:* Specify one or more **Simulation application upload configurations**\. A simulation job output destination must be configured in order to specify upload configurations\. Each configuration specifies an upload behavior, a Unix glob file matching rule, and a location to place matching files\. 
+
+   Default upload configurations maintain backwards compatibility with past simulation job output configurations\. The default configurations will be added to additional upload configurations you create\. 
+
+   For more information about custom uploads, see [Configuring Custom Uploads](simulation-job-custom-upload-configuration.md)\. 
 
 1. Choose **Next**\. 
 

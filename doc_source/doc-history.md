@@ -7,3 +7,4 @@ The following table describes the documentation for this release of AWS RoboMake
 | --- | --- | --- | 
 | New service and guide | This is the initial release of AWS RoboMaker and the AWS RoboMaker Developer Guide\. | 11/07/2018 | 
 | Support for tags | Added support for tags to many AWS RoboMaker resources\. | 1/24/2019 | 
+| Samples deprecated | Deprecated self\-driving reinforcement, navigation, person detection, and voice command samples\. | 5/15/2020 | 

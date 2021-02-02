@@ -18,6 +18,11 @@ Length Constraints: Minimum length of 1\. Maximum length of 64\.
 Pattern: `[a-zA-Z0-9_\-=]*`   
 Required: No
 
+ **compute**   <a name="robomaker-Type-SimulationJob-compute"></a>
+Compute information for the simulation job  
+Type: [ComputeResponse](API_ComputeResponse.md) object  
+Required: No
+
  **dataSources**   <a name="robomaker-Type-SimulationJob-dataSources"></a>
 The data sources for the simulation job\.  
 Type: Array of [DataSource](API_DataSource.md) objects  
@@ -36,12 +41,14 @@ Required: No
  **failureCode**   <a name="robomaker-Type-SimulationJob-failureCode"></a>
 The failure code of the simulation job if it failed\.  
 Type: String  
-Valid Values:` InternalServiceError | RobotApplicationCrash | SimulationApplicationCrash | BadPermissionsRobotApplication | BadPermissionsSimulationApplication | BadPermissionsS3Object | BadPermissionsS3Output | BadPermissionsCloudwatchLogs | SubnetIpLimitExceeded | ENILimitExceeded | BadPermissionsUserCredentials | InvalidBundleRobotApplication | InvalidBundleSimulationApplication | InvalidS3Resource | LimitExceeded | MismatchedEtag | RobotApplicationVersionMismatchedEtag | SimulationApplicationVersionMismatchedEtag | ResourceNotFound | RequestThrottled | BatchTimedOut | BatchCanceled | InvalidInput | WrongRegionS3Bucket | WrongRegionS3Output | WrongRegionRobotApplication | WrongRegionSimulationApplication`   
+Valid Values:` InternalServiceError | RobotApplicationCrash | SimulationApplicationCrash | BadPermissionsRobotApplication | BadPermissionsSimulationApplication | BadPermissionsS3Object | BadPermissionsS3Output | BadPermissionsCloudwatchLogs | SubnetIpLimitExceeded | ENILimitExceeded | BadPermissionsUserCredentials | InvalidBundleRobotApplication | InvalidBundleSimulationApplication | InvalidS3Resource | LimitExceeded | MismatchedEtag | RobotApplicationVersionMismatchedEtag | SimulationApplicationVersionMismatchedEtag | ResourceNotFound | RequestThrottled | BatchTimedOut | BatchCanceled | InvalidInput | WrongRegionS3Bucket | WrongRegionS3Output | WrongRegionRobotApplication | WrongRegionSimulationApplication | UploadContentMismatchError`   
 Required: No
 
  **failureReason**   <a name="robomaker-Type-SimulationJob-failureReason"></a>
 The reason why the simulation job failed\.  
 Type: String  
+Length Constraints: Minimum length of 0\. Maximum length of 1024\.  
+Pattern: `.*`   
 Required: No
 
  **iamRole**   <a name="robomaker-Type-SimulationJob-iamRole"></a>
@@ -114,6 +121,7 @@ Required: No
  **tags**   <a name="robomaker-Type-SimulationJob-tags"></a>
 A map that contains tag keys and tag values that are attached to the simulation job\.  
 Type: String to string map  
+Map Entries: Minimum number of 0 items\. Maximum number of 50 items\.  
 Key Length Constraints: Minimum length of 1\. Maximum length of 128\.  
 Key Pattern: `[a-zA-Z0-9 _.\-\/+=:]*`   
 Value Length Constraints: Minimum length of 0\. Maximum length of 256\.  
@@ -130,5 +138,5 @@ Required: No
 For more information about using this API in one of the language\-specific AWS SDKs, see the following:
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/SimulationJob) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/SimulationJob) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/SimulationJob) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/SimulationJob) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/SimulationJob) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/SimulationJob) 

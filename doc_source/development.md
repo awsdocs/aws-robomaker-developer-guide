@@ -8,5 +8,6 @@ It also describes how to create and manage AWS RoboMaker robot applications and 
 + [Creating a New Robotic Application](application-create-new.md)
 + [Building and Bundling Robotic Applications with Colcon](application-build-bundle.md)
 + [Creating a Simulation Job](application-create-simjob.md)
++ [Using generated worlds in your simulation](application-worlds-using.md)
 + [AWS RoboMaker Cloud Extensions](cloud-services-integration.md)
 + [Developing with AWS Cloud9](cloud9.md)

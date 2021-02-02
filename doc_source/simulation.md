@@ -6,6 +6,7 @@ An AWS RoboMaker simulation job is a pairing of a robot application and a simula
 + [Configuring an AWS RoboMaker Simulation Job to Access Resources in an Amazon VPC](vpc.md)
 + [Connecting to a Simulation Job](simulation-job-remote-connectivity.md)
 + [Accessing Simulation Job Data](simulation-job-data.md)
++ [Configuring Custom Uploads](simulation-job-custom-upload-configuration.md)
 + [Root Access and System Capabilities](simulation-job-root-access.md)
 + [Environment Variables Created by AWS RoboMaker](simulation-job-envvars.md)
 + [Managing Tags in a Simulation Job](simulation-job-tags.md)

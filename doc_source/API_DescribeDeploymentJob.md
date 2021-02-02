@@ -9,7 +9,7 @@ POST /describeDeploymentJob HTTP/1.1
 Content-type: application/json
 
 {
-   "[job](#robomaker-DescribeDeploymentJob-request-job)": "string"
+   "job": "string"
 }
 ```
 
@@ -35,54 +35,54 @@ HTTP/1.1 200
 Content-type: application/json
 
 {
-   "[arn](#robomaker-DescribeDeploymentJob-response-arn)": "string",
-   "[createdAt](#robomaker-DescribeDeploymentJob-response-createdAt)": number,
-   "[deploymentApplicationConfigs](#robomaker-DescribeDeploymentJob-response-deploymentApplicationConfigs)": [ 
+   "arn": "string",
+   "createdAt": number,
+   "deploymentApplicationConfigs": [ 
       { 
-         "[application](API_DeploymentApplicationConfig.md#robomaker-Type-DeploymentApplicationConfig-application)": "string",
-         "[applicationVersion](API_DeploymentApplicationConfig.md#robomaker-Type-DeploymentApplicationConfig-applicationVersion)": "string",
-         "[launchConfig](API_DeploymentApplicationConfig.md#robomaker-Type-DeploymentApplicationConfig-launchConfig)": { 
-            "[environmentVariables](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-environmentVariables)": { 
+         "application": "string",
+         "applicationVersion": "string",
+         "launchConfig": { 
+            "environmentVariables": { 
                "string" : "string" 
             },
-            "[launchFile](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-launchFile)": "string",
-            "[packageName](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-packageName)": "string",
-            "[postLaunchFile](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-postLaunchFile)": "string",
-            "[preLaunchFile](API_DeploymentLaunchConfig.md#robomaker-Type-DeploymentLaunchConfig-preLaunchFile)": "string"
+            "launchFile": "string",
+            "packageName": "string",
+            "postLaunchFile": "string",
+            "preLaunchFile": "string"
          }
       }
    ],
-   "[deploymentConfig](#robomaker-DescribeDeploymentJob-response-deploymentConfig)": { 
-      "[concurrentDeploymentPercentage](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-concurrentDeploymentPercentage)": number,
-      "[downloadConditionFile](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-downloadConditionFile)": { 
-         "[bucket](API_S3Object.md#robomaker-Type-S3Object-bucket)": "string",
-         "[etag](API_S3Object.md#robomaker-Type-S3Object-etag)": "string",
-         "[key](API_S3Object.md#robomaker-Type-S3Object-key)": "string"
+   "deploymentConfig": { 
+      "concurrentDeploymentPercentage": number,
+      "downloadConditionFile": { 
+         "bucket": "string",
+         "etag": "string",
+         "key": "string"
       },
-      "[failureThresholdPercentage](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-failureThresholdPercentage)": number,
-      "[robotDeploymentTimeoutInSeconds](API_DeploymentConfig.md#robomaker-Type-DeploymentConfig-robotDeploymentTimeoutInSeconds)": number
+      "failureThresholdPercentage": number,
+      "robotDeploymentTimeoutInSeconds": number
    },
-   "[failureCode](#robomaker-DescribeDeploymentJob-response-failureCode)": "string",
-   "[failureReason](#robomaker-DescribeDeploymentJob-response-failureReason)": "string",
-   "[fleet](#robomaker-DescribeDeploymentJob-response-fleet)": "string",
-   "[robotDeploymentSummary](#robomaker-DescribeDeploymentJob-response-robotDeploymentSummary)": [ 
+   "failureCode": "string",
+   "failureReason": "string",
+   "fleet": "string",
+   "robotDeploymentSummary": [ 
       { 
-         "[arn](API_RobotDeployment.md#robomaker-Type-RobotDeployment-arn)": "string",
-         "[deploymentFinishTime](API_RobotDeployment.md#robomaker-Type-RobotDeployment-deploymentFinishTime)": number,
-         "[deploymentStartTime](API_RobotDeployment.md#robomaker-Type-RobotDeployment-deploymentStartTime)": number,
-         "[failureCode](API_RobotDeployment.md#robomaker-Type-RobotDeployment-failureCode)": "string",
-         "[failureReason](API_RobotDeployment.md#robomaker-Type-RobotDeployment-failureReason)": "string",
-         "[progressDetail](API_RobotDeployment.md#robomaker-Type-RobotDeployment-progressDetail)": { 
-            "[currentProgress](API_ProgressDetail.md#robomaker-Type-ProgressDetail-currentProgress)": "string",
-            "[estimatedTimeRemainingSeconds](API_ProgressDetail.md#robomaker-Type-ProgressDetail-estimatedTimeRemainingSeconds)": number,
-            "[percentDone](API_ProgressDetail.md#robomaker-Type-ProgressDetail-percentDone)": number,
-            "[targetResource](API_ProgressDetail.md#robomaker-Type-ProgressDetail-targetResource)": "string"
+         "arn": "string",
+         "deploymentFinishTime": number,
+         "deploymentStartTime": number,
+         "failureCode": "string",
+         "failureReason": "string",
+         "progressDetail": { 
+            "currentProgress": "string",
+            "estimatedTimeRemainingSeconds": number,
+            "percentDone": number,
+            "targetResource": "string"
          },
-         "[status](API_RobotDeployment.md#robomaker-Type-RobotDeployment-status)": "string"
+         "status": "string"
       }
    ],
-   "[status](#robomaker-DescribeDeploymentJob-response-status)": "string",
-   "[tags](#robomaker-DescribeDeploymentJob-response-tags)": { 
+   "status": "string",
+   "tags": { 
       "string" : "string" 
    }
 }
@@ -116,11 +116,13 @@ Type: [DeploymentConfig](API_DeploymentConfig.md) object
  ** [failureCode](#API_DescribeDeploymentJob_ResponseSyntax) **   <a name="robomaker-DescribeDeploymentJob-response-failureCode"></a>
 The deployment job failure code\.  
 Type: String  
-Valid Values:` ResourceNotFound | EnvironmentSetupError | EtagMismatch | FailureThresholdBreached | RobotDeploymentAborted | RobotDeploymentNoResponse | RobotAgentConnectionTimeout | GreengrassDeploymentFailed | MissingRobotArchitecture | MissingRobotApplicationArchitecture | MissingRobotDeploymentResource | GreengrassGroupVersionDoesNotExist | ExtractingBundleFailure | PreLaunchFileFailure | PostLaunchFileFailure | BadPermissionError | DownloadConditionFailed | InternalServerError` 
+Valid Values:` ResourceNotFound | EnvironmentSetupError | EtagMismatch | FailureThresholdBreached | RobotDeploymentAborted | RobotDeploymentNoResponse | RobotAgentConnectionTimeout | GreengrassDeploymentFailed | InvalidGreengrassGroup | MissingRobotArchitecture | MissingRobotApplicationArchitecture | MissingRobotDeploymentResource | GreengrassGroupVersionDoesNotExist | LambdaDeleted | ExtractingBundleFailure | PreLaunchFileFailure | PostLaunchFileFailure | BadPermissionError | DownloadConditionFailed | InternalServerError` 
 
  ** [failureReason](#API_DescribeDeploymentJob_ResponseSyntax) **   <a name="robomaker-DescribeDeploymentJob-response-failureReason"></a>
 A short description of the reason why the deployment job failed\.  
-Type: String
+Type: String  
+Length Constraints: Minimum length of 0\. Maximum length of 1024\.  
+Pattern: `.*` 
 
  ** [fleet](#API_DescribeDeploymentJob_ResponseSyntax) **   <a name="robomaker-DescribeDeploymentJob-response-fleet"></a>
 The Amazon Resource Name \(ARN\) of the fleet\.  
@@ -140,6 +142,7 @@ Valid Values:` Pending | Preparing | InProgress | Failed | Succeeded | Canceled`
  ** [tags](#API_DescribeDeploymentJob_ResponseSyntax) **   <a name="robomaker-DescribeDeploymentJob-response-tags"></a>
 The list of all tags added to the specified deployment job\.  
 Type: String to string map  
+Map Entries: Minimum number of 0 items\. Maximum number of 50 items\.  
 Key Length Constraints: Minimum length of 1\. Maximum length of 128\.  
 Key Pattern: `[a-zA-Z0-9 _.\-\/+=:]*`   
 Value Length Constraints: Minimum length of 0\. Maximum length of 256\.  
@@ -172,8 +175,8 @@ For more information about using this API in one of the language\-specific AWS S
 +  [AWS SDK for \.NET](https://docs.aws.amazon.com/goto/DotNetSDKV3/robomaker-2018-06-29/DescribeDeploymentJob) 
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/DescribeDeploymentJob) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/DescribeDeploymentJob) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/DescribeDeploymentJob) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/DescribeDeploymentJob) 
 +  [AWS SDK for JavaScript](https://docs.aws.amazon.com/goto/AWSJavaScriptSDK/robomaker-2018-06-29/DescribeDeploymentJob) 
 +  [AWS SDK for PHP V3](https://docs.aws.amazon.com/goto/SdkForPHPV3/robomaker-2018-06-29/DescribeDeploymentJob) 
 +  [AWS SDK for Python](https://docs.aws.amazon.com/goto/boto3/robomaker-2018-06-29/DescribeDeploymentJob) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/DescribeDeploymentJob) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/DescribeDeploymentJob) 

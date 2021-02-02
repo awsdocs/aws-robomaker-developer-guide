@@ -9,15 +9,15 @@ POST /listSimulationApplications HTTP/1.1
 Content-type: application/json
 
 {
-   "[filters](#robomaker-ListSimulationApplications-request-filters)": [ 
+   "filters": [ 
       { 
-         "[name](API_Filter.md#robomaker-Type-Filter-name)": "string",
-         "[values](API_Filter.md#robomaker-Type-Filter-values)": [ "string" ]
+         "name": "string",
+         "values": [ "string" ]
       }
    ],
-   "[maxResults](#robomaker-ListSimulationApplications-request-maxResults)": number,
-   "[nextToken](#robomaker-ListSimulationApplications-request-nextToken)": "string",
-   "[versionQualifier](#robomaker-ListSimulationApplications-request-versionQualifier)": "string"
+   "maxResults": number,
+   "nextToken": "string",
+   "versionQualifier": "string"
 }
 ```
 
@@ -42,7 +42,7 @@ Type: Integer
 Required: No
 
  ** [nextToken](#API_ListSimulationApplications_RequestSyntax) **   <a name="robomaker-ListSimulationApplications-request-nextToken"></a>
-The `nextToken` value returned from a previous paginated `ListSimulationApplications` request where `maxResults` was used and the results exceeded the value of that parameter\. Pagination continues from the end of the previous results that returned the `nextToken` value\.   
+If the previous paginated request did not return all of the remaining results, the response object's `nextToken` parameter value is set to a token\. To retrieve the next set of results, call `ListSimulationApplications` again and assign that token to the request object's `nextToken` parameter\. If there are no remaining results, the previous response object's NextToken parameter is set to null\.   
 Type: String  
 Length Constraints: Minimum length of 1\. Maximum length of 2048\.  
 Pattern: `[a-zA-Z0-9_.\-\/+=]*`   
@@ -51,6 +51,7 @@ Required: No
  ** [versionQualifier](#API_ListSimulationApplications_RequestSyntax) **   <a name="robomaker-ListSimulationApplications-request-versionQualifier"></a>
 The version qualifier of the simulation application\.  
 Type: String  
+Length Constraints: Minimum length of 1\. Maximum length of 255\.  
 Pattern: `ALL`   
 Required: No
 
@@ -61,21 +62,21 @@ HTTP/1.1 200
 Content-type: application/json
 
 {
-   "[nextToken](#robomaker-ListSimulationApplications-response-nextToken)": "string",
-   "[simulationApplicationSummaries](#robomaker-ListSimulationApplications-response-simulationApplicationSummaries)": [ 
+   "nextToken": "string",
+   "simulationApplicationSummaries": [ 
       { 
-         "[arn](API_SimulationApplicationSummary.md#robomaker-Type-SimulationApplicationSummary-arn)": "string",
-         "[lastUpdatedAt](API_SimulationApplicationSummary.md#robomaker-Type-SimulationApplicationSummary-lastUpdatedAt)": number,
-         "[name](API_SimulationApplicationSummary.md#robomaker-Type-SimulationApplicationSummary-name)": "string",
-         "[robotSoftwareSuite](API_SimulationApplicationSummary.md#robomaker-Type-SimulationApplicationSummary-robotSoftwareSuite)": { 
-            "[name](API_RobotSoftwareSuite.md#robomaker-Type-RobotSoftwareSuite-name)": "string",
-            "[version](API_RobotSoftwareSuite.md#robomaker-Type-RobotSoftwareSuite-version)": "string"
+         "arn": "string",
+         "lastUpdatedAt": number,
+         "name": "string",
+         "robotSoftwareSuite": { 
+            "name": "string",
+            "version": "string"
          },
-         "[simulationSoftwareSuite](API_SimulationApplicationSummary.md#robomaker-Type-SimulationApplicationSummary-simulationSoftwareSuite)": { 
-            "[name](API_SimulationSoftwareSuite.md#robomaker-Type-SimulationSoftwareSuite-name)": "string",
-            "[version](API_SimulationSoftwareSuite.md#robomaker-Type-SimulationSoftwareSuite-version)": "string"
+         "simulationSoftwareSuite": { 
+            "name": "string",
+            "version": "string"
          },
-         "[version](API_SimulationApplicationSummary.md#robomaker-Type-SimulationApplicationSummary-version)": "string"
+         "version": "string"
       }
    ]
 }
@@ -88,7 +89,7 @@ If the action is successful, the service sends back an HTTP 200 response\.
 The following data is returned in JSON format by the service\.
 
  ** [nextToken](#API_ListSimulationApplications_ResponseSyntax) **   <a name="robomaker-ListSimulationApplications-response-nextToken"></a>
-The `nextToken` value to include in a future `ListSimulationApplications` request\. When the results of a `ListRobot` request exceed `maxResults`, this value can be used to retrieve the next page of results\. This value is `null` when there are no more results to return\.   
+If the previous paginated request did not return all of the remaining results, the response object's `nextToken` parameter value is set to a token\. To retrieve the next set of results, call `ListSimulationApplications` again and assign that token to the request object's `nextToken` parameter\. If there are no remaining results, the previous response object's NextToken parameter is set to null\.   
 Type: String  
 Length Constraints: Minimum length of 1\. Maximum length of 2048\.  
 Pattern: `[a-zA-Z0-9_.\-\/+=]*` 
@@ -121,8 +122,8 @@ For more information about using this API in one of the language\-specific AWS S
 +  [AWS SDK for \.NET](https://docs.aws.amazon.com/goto/DotNetSDKV3/robomaker-2018-06-29/ListSimulationApplications) 
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/ListSimulationApplications) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/ListSimulationApplications) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/ListSimulationApplications) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/ListSimulationApplications) 
 +  [AWS SDK for JavaScript](https://docs.aws.amazon.com/goto/AWSJavaScriptSDK/robomaker-2018-06-29/ListSimulationApplications) 
 +  [AWS SDK for PHP V3](https://docs.aws.amazon.com/goto/SdkForPHPV3/robomaker-2018-06-29/ListSimulationApplications) 
 +  [AWS SDK for Python](https://docs.aws.amazon.com/goto/boto3/robomaker-2018-06-29/ListSimulationApplications) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/ListSimulationApplications) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/ListSimulationApplications) 

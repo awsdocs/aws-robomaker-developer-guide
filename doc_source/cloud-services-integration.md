@@ -8,6 +8,7 @@ Available packages include the following\.
 +  **Amazon Kinesis Video Streams** — Stream real\-time video from your robot into AWS\. 
 +  **Amazon Lex** — Create a robot with engaging user experiences and lifelike conversation\. 
 +  **Amazon Polly** — Turn text into speech using lifelike voices in different languages\. 
++ **Amazon S3 ** — Easily record and store robotic application data\.
 
 To see these extensions in action, visit the AWS RoboMaker sample application page [AWS RoboMaker sample applications](https://us-west-2.console.aws.amazon.com/robomaker/home?#sampleSimulationJobs)\. You can quickly and easily launch and engage with different robot simulations\.
 
@@ -27,3 +28,4 @@ To install the AWS RoboMaker cloud extensions, follow the instructions provided 
 + [Amazon Polly](https://github.com/aws-robotics/tts-ros1/blob/master/README.md)
 + [Amazon CloudWatch Logs](https://github.com/aws-robotics/cloudwatchlogs-ros1/blob/master/README.md)
 + [Amazon CloudWatch Metrics](https://github.com/aws-robotics/cloudwatchmetrics-ros1/blob/master/README.md)
++ [Amazon S3 rosbags](https://github.com/aws-robotics/rosbag-uploader-ros1/blob/master/README.md)

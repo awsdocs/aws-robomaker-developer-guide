@@ -17,7 +17,10 @@ You can also work with tags using the AWS CLI and the AWS RoboMaker API\. You ca
 + [CreateRobotApplication](https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateRobotApplication.html)
 + [CreateSimulationApplication](https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateSimulationApplication.html)
 + [CreateSimulationJob](https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateSimulationJob.html)
-+ [StartSimulationJobBatch](https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateSimulationJobStart.html)
++ [CreateWorldExportJob](https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateWorldExportJob.html)
++ [CreateWorldGenerationJob](https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateWorldGenerationJob.html)
++ [CreateWorldTemplate](https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateWorldTemplate.html)
++ [StartSimulationJobBatch](https://docs.aws.amazon.com/robomaker/latest/dg/API_StartSimulationJobBatch.html)
 
 You can add, modify, or delete tags for existing resources that support tagging by using the following commands:
 + [TagResource](https://docs.aws.amazon.com/robomaker/latest/dg/API_TagResource.html)

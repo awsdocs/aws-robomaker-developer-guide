@@ -103,6 +103,8 @@ If you have already created these roles, you can skip to [Create a robot](#creat
 
 1. Optionally, under **Tags**, specify one or more tags for the robot\. Tags are words or phrases that act as metadata for identifying and organizing your AWS resources\. Each tag consists of a key and a value\. You can manage tags for your robot on the **Robot details** page\.
 
+   Your tags can be populated as environment variables on the robot when the robot application is deployed\. Tags must only contain alphanumeric or underscore characters\. The environment variable name will be formatted as `AWS_ROBOMAKER_ROBOT_TAG_KEY_TAGKEY`, where `TAGKEY` is your tag key\. The tag value will be the environment variable value\.
+
    For more about tagging, see [Tagging Your AWS RoboMaker Resources](tagging-robomaker.md)\.
 
 1. Choose **Create**\. 
@@ -110,6 +112,8 @@ If you have already created these roles, you can skip to [Create a robot](#creat
 1. In the **Download your Core device** page, choose **Download** to download and store your robot's security resources\.
 
 1.  Download AWS IoT Greengrass core software matching the architecture of your physical robot\. To configure and run the AWS IoT Greengrass core software, follow the steps in [Module 1: Environment Setup for Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/module1.html)\. Then follow the steps in [Start AWS Greengrass on the Core Device](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-device-start.html)\. 
+
+   For more information about how you can verify your device supports AWS IoT Greengrass, see [https://docs.aws.amazon.com/greengrass/latest/developerguide/device-tester-for-greengrass-ug.html](https://docs.aws.amazon.com/greengrass/latest/developerguide/device-tester-for-greengrass-ug.html)AWS IoT Device Tester for AWS IoT Greengrass\.
 
     Use the following command to unzip your security resources: 
 

@@ -9,7 +9,7 @@ POST /describeFleet HTTP/1.1
 Content-type: application/json
 
 {
-   "[fleet](#robomaker-DescribeFleet-request-fleet)": "string"
+   "fleet": "string"
 }
 ```
 
@@ -35,26 +35,26 @@ HTTP/1.1 200
 Content-type: application/json
 
 {
-   "[arn](#robomaker-DescribeFleet-response-arn)": "string",
-   "[createdAt](#robomaker-DescribeFleet-response-createdAt)": number,
-   "[lastDeploymentJob](#robomaker-DescribeFleet-response-lastDeploymentJob)": "string",
-   "[lastDeploymentStatus](#robomaker-DescribeFleet-response-lastDeploymentStatus)": "string",
-   "[lastDeploymentTime](#robomaker-DescribeFleet-response-lastDeploymentTime)": number,
-   "[name](#robomaker-DescribeFleet-response-name)": "string",
-   "[robots](#robomaker-DescribeFleet-response-robots)": [ 
+   "arn": "string",
+   "createdAt": number,
+   "lastDeploymentJob": "string",
+   "lastDeploymentStatus": "string",
+   "lastDeploymentTime": number,
+   "name": "string",
+   "robots": [ 
       { 
-         "[architecture](API_Robot.md#robomaker-Type-Robot-architecture)": "string",
-         "[arn](API_Robot.md#robomaker-Type-Robot-arn)": "string",
-         "[createdAt](API_Robot.md#robomaker-Type-Robot-createdAt)": number,
-         "[fleetArn](API_Robot.md#robomaker-Type-Robot-fleetArn)": "string",
-         "[greenGrassGroupId](API_Robot.md#robomaker-Type-Robot-greenGrassGroupId)": "string",
-         "[lastDeploymentJob](API_Robot.md#robomaker-Type-Robot-lastDeploymentJob)": "string",
-         "[lastDeploymentTime](API_Robot.md#robomaker-Type-Robot-lastDeploymentTime)": number,
-         "[name](API_Robot.md#robomaker-Type-Robot-name)": "string",
-         "[status](API_Robot.md#robomaker-Type-Robot-status)": "string"
+         "architecture": "string",
+         "arn": "string",
+         "createdAt": number,
+         "fleetArn": "string",
+         "greenGrassGroupId": "string",
+         "lastDeploymentJob": "string",
+         "lastDeploymentTime": number,
+         "name": "string",
+         "status": "string"
       }
    ],
-   "[tags](#robomaker-DescribeFleet-response-tags)": { 
+   "tags": { 
       "string" : "string" 
    }
 }
@@ -105,6 +105,7 @@ Array Members: Minimum number of 0 items\. Maximum number of 1000 items\.
  ** [tags](#API_DescribeFleet_ResponseSyntax) **   <a name="robomaker-DescribeFleet-response-tags"></a>
 The list of all tags added to the specified fleet\.  
 Type: String to string map  
+Map Entries: Minimum number of 0 items\. Maximum number of 50 items\.  
 Key Length Constraints: Minimum length of 1\. Maximum length of 128\.  
 Key Pattern: `[a-zA-Z0-9 _.\-\/+=:]*`   
 Value Length Constraints: Minimum length of 0\. Maximum length of 256\.  
@@ -137,8 +138,8 @@ For more information about using this API in one of the language\-specific AWS S
 +  [AWS SDK for \.NET](https://docs.aws.amazon.com/goto/DotNetSDKV3/robomaker-2018-06-29/DescribeFleet) 
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/DescribeFleet) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/DescribeFleet) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/DescribeFleet) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/DescribeFleet) 
 +  [AWS SDK for JavaScript](https://docs.aws.amazon.com/goto/AWSJavaScriptSDK/robomaker-2018-06-29/DescribeFleet) 
 +  [AWS SDK for PHP V3](https://docs.aws.amazon.com/goto/SdkForPHPV3/robomaker-2018-06-29/DescribeFleet) 
 +  [AWS SDK for Python](https://docs.aws.amazon.com/goto/boto3/robomaker-2018-06-29/DescribeFleet) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/DescribeFleet) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/DescribeFleet) 

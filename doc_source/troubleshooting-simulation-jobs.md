@@ -38,7 +38,7 @@ If you specify an output S3 bucket for a simulation job, your role must have wri
 {
     "Action": "s3:ListBucket",
     "Resource": [
-        "my-bucket"
+        "my-bucket/*"
     ],
     "Effect": "Allow"
 },
@@ -48,14 +48,14 @@ If you specify an output S3 bucket for a simulation job, your role must have wri
         "s3:List*"
     ],
     "Resource": [
-        "my-bucket"
+        "my-bucket/*"
     ],
     "Effect": "Allow"
 },
 {
     "Action": "s3:Put*",
     "Resource": [
-        "my-bucket"
+        "my-bucket/*"
     ],
     "Effect": "Allow"
 }
@@ -118,7 +118,7 @@ Use CloudWatch Logs to verify the node package name used by the simulation job\.
 ERROR: cannot launch node of type [node_package_name/node_type]: node_package_name
 ```
 
-### Did you Include an Incorrect Launch File?<a name="troubleshooting-launch-badnode"></a>
+### Did you Include an Incorrect Launch File?<a name="troubleshooting-launch-incorrect"></a>
 
 Use CloudWatch Logs to check if the launch file was not found\. Filter to `roslaunch` events, and then expand each event to look for issues similar to the following\. 
 

@@ -42,7 +42,7 @@ MyApplication
 ## Prerequisites<a name="application-create-prereq"></a>
 
 You need to have a development environment configured for robotics development using AWS RoboMaker\. Your development environment must have the following:
-+ Robot Operating System \(ROS\) [Kinetic](http://wiki.ros.org/kinetic) or [Melodic](http://wiki.ros.org/melodic)
++ Robot Operating System \(ROS\) [Kinetic](http://wiki.ros.org/kinetic) or [Melodic](http://wiki.ros.org/melodic) or ROS2\.
 + [Colcon](https://github.com/colcon/colcon-core)
 
 To create a preconfigured robotics development environment in AWS Cloud9, see [Creating a Development Environment](cloud9-create-ide.md)\.

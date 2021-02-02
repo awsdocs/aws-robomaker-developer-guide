@@ -76,5 +76,3 @@ def add_tags(tags):
     else:
         rospy.logerr("Add tags request failed for tags (%s): %s", tags, response.message)
 ```
-
-For more information about ``

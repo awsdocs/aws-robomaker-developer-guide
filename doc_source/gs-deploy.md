@@ -1,6 +1,6 @@
 # Step 5: Deploy Robot Application<a name="gs-deploy"></a>
 
-In this section, you compile the Hello World robot application for the ARMHF platform, which is used by TurtleBot3\. You also create a robot in AWS RoboMaker and then configure your TurtleBot3 robot with AWS IoT Greengrass software\. Then you register the robot into a new fleet and deploy the application\.
+In this section, you compile the Hello World robot application for the ARMHF architecture, which is used by TurtleBot3\. You also create a robot in AWS RoboMaker and then configure your TurtleBot3 robot with AWS IoT Greengrass software\. Then you register the robot into a new fleet and deploy the application\.
 
 **Topics**
 + [Prepare your TurtleBot3 Robot](#gs-deploy-config)

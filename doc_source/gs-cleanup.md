@@ -2,6 +2,8 @@
 
 To avoid extra charges, use the AWS Management Console to delete items that you created for this exercise\. 
 
+
+
 1. Open the AWS RoboMaker console at `[https://console\.aws\.amazon\.com/robomaker/](https://console.aws.amazon.com/robomaker/)` \. Choose **Simulation jobs** and then choose the **Hello World** simulation job\. In the **Simulation job details** page, choose **Actions**, choose **Cancel**, and then choose **Yes, cancel**\. 
 **Note**  
 Simulation jobs are automatically deleted after 90 days\.

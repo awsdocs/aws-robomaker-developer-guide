@@ -9,10 +9,10 @@ POST /createRobot HTTP/1.1
 Content-type: application/json
 
 {
-   "[architecture](#robomaker-CreateRobot-request-architecture)": "string",
-   "[greengrassGroupId](#robomaker-CreateRobot-request-greengrassGroupId)": "string",
-   "[name](#robomaker-CreateRobot-request-name)": "string",
-   "[tags](#robomaker-CreateRobot-request-tags)": { 
+   "architecture": "string",
+   "greengrassGroupId": "string",
+   "name": "string",
+   "tags": { 
       "string" : "string" 
    }
 }
@@ -49,6 +49,7 @@ Required: Yes
  ** [tags](#API_CreateRobot_RequestSyntax) **   <a name="robomaker-CreateRobot-request-tags"></a>
 A map that contains tag keys and tag values that are attached to the robot\.  
 Type: String to string map  
+Map Entries: Minimum number of 0 items\. Maximum number of 50 items\.  
 Key Length Constraints: Minimum length of 1\. Maximum length of 128\.  
 Key Pattern: `[a-zA-Z0-9 _.\-\/+=:]*`   
 Value Length Constraints: Minimum length of 0\. Maximum length of 256\.  
@@ -62,12 +63,12 @@ HTTP/1.1 200
 Content-type: application/json
 
 {
-   "[architecture](#robomaker-CreateRobot-response-architecture)": "string",
-   "[arn](#robomaker-CreateRobot-response-arn)": "string",
-   "[createdAt](#robomaker-CreateRobot-response-createdAt)": number,
-   "[greengrassGroupId](#robomaker-CreateRobot-response-greengrassGroupId)": "string",
-   "[name](#robomaker-CreateRobot-response-name)": "string",
-   "[tags](#robomaker-CreateRobot-response-tags)": { 
+   "architecture": "string",
+   "arn": "string",
+   "createdAt": number,
+   "greengrassGroupId": "string",
+   "name": "string",
+   "tags": { 
       "string" : "string" 
    }
 }
@@ -109,6 +110,7 @@ Pattern: `[a-zA-Z0-9_\-]*`
  ** [tags](#API_CreateRobot_ResponseSyntax) **   <a name="robomaker-CreateRobot-response-tags"></a>
 The list of all tags added to the robot\.  
 Type: String to string map  
+Map Entries: Minimum number of 0 items\. Maximum number of 50 items\.  
 Key Length Constraints: Minimum length of 1\. Maximum length of 128\.  
 Key Pattern: `[a-zA-Z0-9 _.\-\/+=:]*`   
 Value Length Constraints: Minimum length of 0\. Maximum length of 256\.  
@@ -145,8 +147,8 @@ For more information about using this API in one of the language\-specific AWS S
 +  [AWS SDK for \.NET](https://docs.aws.amazon.com/goto/DotNetSDKV3/robomaker-2018-06-29/CreateRobot) 
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/CreateRobot) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/CreateRobot) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/CreateRobot) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/CreateRobot) 
 +  [AWS SDK for JavaScript](https://docs.aws.amazon.com/goto/AWSJavaScriptSDK/robomaker-2018-06-29/CreateRobot) 
 +  [AWS SDK for PHP V3](https://docs.aws.amazon.com/goto/SdkForPHPV3/robomaker-2018-06-29/CreateRobot) 
 +  [AWS SDK for Python](https://docs.aws.amazon.com/goto/boto3/robomaker-2018-06-29/CreateRobot) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/CreateRobot) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/CreateRobot) 

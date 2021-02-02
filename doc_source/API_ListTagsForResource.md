@@ -10,12 +10,13 @@ GET /tags/resourceArn HTTP/1.1
 
 ## URI Request Parameters<a name="API_ListTagsForResource_RequestParameters"></a>
 
-The request requires the following URI parameters\.
+The request uses the following URI parameters\.
 
  ** [resourceArn](#API_ListTagsForResource_RequestSyntax) **   <a name="robomaker-ListTagsForResource-request-resourceArn"></a>
 The AWS RoboMaker Amazon Resource Name \(ARN\) with tags to be listed\.  
 Length Constraints: Minimum length of 1\. Maximum length of 1224\.  
-Pattern: `arn:.*` 
+Pattern: `arn:.*`   
+Required: Yes
 
 ## Request Body<a name="API_ListTagsForResource_RequestBody"></a>
 
@@ -28,7 +29,7 @@ HTTP/1.1 200
 Content-type: application/json
 
 {
-   "[tags](#robomaker-ListTagsForResource-response-tags)": { 
+   "tags": { 
       "string" : "string" 
    }
 }
@@ -43,6 +44,7 @@ The following data is returned in JSON format by the service\.
  ** [tags](#API_ListTagsForResource_ResponseSyntax) **   <a name="robomaker-ListTagsForResource-response-tags"></a>
 The list of all tags added to the specified resource\.  
 Type: String to string map  
+Map Entries: Minimum number of 0 items\. Maximum number of 50 items\.  
 Key Length Constraints: Minimum length of 1\. Maximum length of 128\.  
 Key Pattern: `[a-zA-Z0-9 _.\-\/+=:]*`   
 Value Length Constraints: Minimum length of 0\. Maximum length of 256\.  
@@ -75,8 +77,8 @@ For more information about using this API in one of the language\-specific AWS S
 +  [AWS SDK for \.NET](https://docs.aws.amazon.com/goto/DotNetSDKV3/robomaker-2018-06-29/ListTagsForResource) 
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/ListTagsForResource) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/ListTagsForResource) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/ListTagsForResource) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/ListTagsForResource) 
 +  [AWS SDK for JavaScript](https://docs.aws.amazon.com/goto/AWSJavaScriptSDK/robomaker-2018-06-29/ListTagsForResource) 
 +  [AWS SDK for PHP V3](https://docs.aws.amazon.com/goto/SdkForPHPV3/robomaker-2018-06-29/ListTagsForResource) 
 +  [AWS SDK for Python](https://docs.aws.amazon.com/goto/boto3/robomaker-2018-06-29/ListTagsForResource) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/ListTagsForResource) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/ListTagsForResource) 

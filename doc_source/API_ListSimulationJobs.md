@@ -9,14 +9,14 @@ POST /listSimulationJobs HTTP/1.1
 Content-type: application/json
 
 {
-   "[filters](#robomaker-ListSimulationJobs-request-filters)": [ 
+   "filters": [ 
       { 
-         "[name](API_Filter.md#robomaker-Type-Filter-name)": "string",
-         "[values](API_Filter.md#robomaker-Type-Filter-values)": [ "string" ]
+         "name": "string",
+         "values": [ "string" ]
       }
    ],
-   "[maxResults](#robomaker-ListSimulationJobs-request-maxResults)": number,
-   "[nextToken](#robomaker-ListSimulationJobs-request-nextToken)": "string"
+   "maxResults": number,
+   "nextToken": "string"
 }
 ```
 
@@ -41,8 +41,7 @@ Type: Integer
 Required: No
 
  ** [nextToken](#API_ListSimulationJobs_RequestSyntax) **   <a name="robomaker-ListSimulationJobs-request-nextToken"></a>
-The `nextToken` value returned from a previous paginated `ListSimulationJobs` request where `maxResults` was used and the results exceeded the value of that parameter\. Pagination continues from the end of the previous results that returned the `nextToken` value\.   
-This token should be treated as an opaque identifier that is only used to retrieve the next items in a list and not for other programmatic purposes\.
+If the previous paginated request did not return all of the remaining results, the response object's `nextToken` parameter value is set to a token\. To retrieve the next set of results, call `ListSimulationJobs` again and assign that token to the request object's `nextToken` parameter\. If there are no remaining results, the previous response object's NextToken parameter is set to null\.   
 Type: String  
 Length Constraints: Minimum length of 1\. Maximum length of 2048\.  
 Pattern: `[a-zA-Z0-9_.\-\/+=]*`   
@@ -55,16 +54,16 @@ HTTP/1.1 200
 Content-type: application/json
 
 {
-   "[nextToken](#robomaker-ListSimulationJobs-response-nextToken)": "string",
-   "[simulationJobSummaries](#robomaker-ListSimulationJobs-response-simulationJobSummaries)": [ 
+   "nextToken": "string",
+   "simulationJobSummaries": [ 
       { 
-         "[arn](API_SimulationJobSummary.md#robomaker-Type-SimulationJobSummary-arn)": "string",
-         "[dataSourceNames](API_SimulationJobSummary.md#robomaker-Type-SimulationJobSummary-dataSourceNames)": [ "string" ],
-         "[lastUpdatedAt](API_SimulationJobSummary.md#robomaker-Type-SimulationJobSummary-lastUpdatedAt)": number,
-         "[name](API_SimulationJobSummary.md#robomaker-Type-SimulationJobSummary-name)": "string",
-         "[robotApplicationNames](API_SimulationJobSummary.md#robomaker-Type-SimulationJobSummary-robotApplicationNames)": [ "string" ],
-         "[simulationApplicationNames](API_SimulationJobSummary.md#robomaker-Type-SimulationJobSummary-simulationApplicationNames)": [ "string" ],
-         "[status](API_SimulationJobSummary.md#robomaker-Type-SimulationJobSummary-status)": "string"
+         "arn": "string",
+         "dataSourceNames": [ "string" ],
+         "lastUpdatedAt": number,
+         "name": "string",
+         "robotApplicationNames": [ "string" ],
+         "simulationApplicationNames": [ "string" ],
+         "status": "string"
       }
    ]
 }
@@ -77,7 +76,7 @@ If the action is successful, the service sends back an HTTP 200 response\.
 The following data is returned in JSON format by the service\.
 
  ** [nextToken](#API_ListSimulationJobs_ResponseSyntax) **   <a name="robomaker-ListSimulationJobs-response-nextToken"></a>
-The `nextToken` value to include in a future `ListSimulationJobs` request\. When the results of a `ListRobot` request exceed `maxResults`, this value can be used to retrieve the next page of results\. This value is `null` when there are no more results to return\.   
+If the previous paginated request did not return all of the remaining results, the response object's `nextToken` parameter value is set to a token\. To retrieve the next set of results, call `ListSimulationJobs` again and assign that token to the request object's `nextToken` parameter\. If there are no remaining results, the previous response object's NextToken parameter is set to null\.   
 Type: String  
 Length Constraints: Minimum length of 1\. Maximum length of 2048\.  
 Pattern: `[a-zA-Z0-9_.\-\/+=]*` 
@@ -110,8 +109,8 @@ For more information about using this API in one of the language\-specific AWS S
 +  [AWS SDK for \.NET](https://docs.aws.amazon.com/goto/DotNetSDKV3/robomaker-2018-06-29/ListSimulationJobs) 
 +  [AWS SDK for C\+\+](https://docs.aws.amazon.com/goto/SdkForCpp/robomaker-2018-06-29/ListSimulationJobs) 
 +  [AWS SDK for Go](https://docs.aws.amazon.com/goto/SdkForGoV1/robomaker-2018-06-29/ListSimulationJobs) 
-+  [AWS SDK for Java](https://docs.aws.amazon.com/goto/SdkForJava/robomaker-2018-06-29/ListSimulationJobs) 
++  [AWS SDK for Java V2](https://docs.aws.amazon.com/goto/SdkForJavaV2/robomaker-2018-06-29/ListSimulationJobs) 
 +  [AWS SDK for JavaScript](https://docs.aws.amazon.com/goto/AWSJavaScriptSDK/robomaker-2018-06-29/ListSimulationJobs) 
 +  [AWS SDK for PHP V3](https://docs.aws.amazon.com/goto/SdkForPHPV3/robomaker-2018-06-29/ListSimulationJobs) 
 +  [AWS SDK for Python](https://docs.aws.amazon.com/goto/boto3/robomaker-2018-06-29/ListSimulationJobs) 
-+  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/goto/SdkForRubyV2/robomaker-2018-06-29/ListSimulationJobs) 
++  [AWS SDK for Ruby V3](https://docs.aws.amazon.com/goto/SdkForRubyV3/robomaker-2018-06-29/ListSimulationJobs) 
