@@ -16,7 +16,7 @@ Before you begin working with a robot application and simulation application cod
 
 1. In the **AWS RoboMaker gzclient** window, use the mouse or keyboard to zoom in on the TurtleBot\. For more information, see [Gazebo Keyboard Shortcuts](http://gazebosim.org/hotkeys)\.
 
-   It is spinning clockwise\. Gazebo is fully functional, so you can try out other features\. For example, if you want more light on the robot, choose the **sun** \(point light\) icon\. Then move the pointer around the robot to illuminate it\.
+   It is spinning counter-clockwise\. Gazebo is fully functional, so you can try out other features\. For example, if you want more light on the robot, choose the **sun** \(point light\) icon\. Then move the pointer around the robot to illuminate it\.
 
 1. When you are done, close Gazebo by closing the browser window\.
 
