@@ -40,7 +40,7 @@ In this section, you use the AWS Cloud9 development environment to modify the ro
 
 1. In the **HelloWorld** AWS Cloud9 development environment, choose **Resources**, then choose **Download samples**, and then select **1\. Hello World**\.
 
-1. On the left, in the **Environment** tab, expand **HelloWorld**, **HelloWorld**, **robot\_ws**\. **src**, **hello\_world\_robot**, and then **nodes**\. Select the file **rotate** to load into the editor\.
+1. On the left, in the **Environment** tab, expand **HelloWorld**/**robot\_ws**/**src**/**hello\_world\_robot**/**nodes**\. Select the file **rotate** to load into the editor\.
 
 1. In the **rotate** tab, modify the code to make the robot turn clockwise by making the rate negative: `self.twist.angular.z = -0.1`\. Save the file by selecting **File** and then **Save**\. 
 
